@@ -1,0 +1,13 @@
+@import './scss/_html5';
+body {
+  line-height: 1.8;
+  font-family: 'microsoft yahei', Arial;
+  background: #f5f6f8;
+}
+.container-full {
+}
+.container {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}

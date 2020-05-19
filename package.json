@@ -14,7 +14,11 @@
     "element-ui": "^2.13.1",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.15",
+<<<<<<< HEAD
     "moment": "^2.25.3",
+=======
+    "js-cookie": "^2.2.1",
+>>>>>>> e35c1cf4a51f8ef4a158267ab417e01aa28e153f
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.4.0"

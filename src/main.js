@@ -78,7 +78,7 @@ import {
   Message,
   Notification,
 } from 'element-ui';
-import './assets/theme/index.css'
+import './assets/theme/index.css';
 import router from './router/index'; // eslint-disable-line
 import App from './App';
 import store from './store/index';

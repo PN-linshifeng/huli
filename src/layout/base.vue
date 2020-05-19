@@ -6,16 +6,16 @@
         <base-aside />
       </div>
       <div class="main-right">
-        <router-view class="view-page"></router-view>
+        <router-view class="view-page" />
       </div>
     </div>
     <base-footer />
   </div>
 </template>
 <script>
-import BaseHeader from '@/components/Header/index';
-import BaseAside from '@/components/Aside/index';
-import BaseFooter from '@/components/Footer/index';
+import BaseHeader from './components/Header/index';
+import BaseAside from './components/Aside/index';
+import BaseFooter from './components/Footer/index';
 
 export default {
   name: 'App',

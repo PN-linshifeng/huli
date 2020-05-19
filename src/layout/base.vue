@@ -49,6 +49,11 @@ export default {
     min-height: 700px;
     background: #ffffff;
   }
+  .card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #ffffff;
+  }
   // background: #ffffff;
 }
 </style>

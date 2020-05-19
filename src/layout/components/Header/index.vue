@@ -11,7 +11,7 @@
           <img src="../../../assets/images/huli_09.png" alt="作者福利" />
           作者福利
         </router-link>
-        <router-link to="/">
+        <router-link to="/message">
           <img src="../../../assets/images/huli_11.png" alt="消息" />
           消息
         </router-link>

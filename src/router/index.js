@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import BaseLayout from '@/layout/base';
 import Home from '@/views/Home';
+import MessageList from '@/views/Message/list';
 
 Vue.use(Router);
 
@@ -40,6 +41,11 @@ export const constantRoutes = [
         path: '/index',
         name: 'index',
         component: Home,
+      },
+      {
+        path: '/message',
+        name: '/message',
+        component: MessageList,
       },
     ],
   },

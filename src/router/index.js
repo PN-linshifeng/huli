@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import BaseLayout from '@/layout/base';
 import Home from '@/views/Home';
 import MessageList from '@/views/Message/list';
+import MessageInfo from '@/views/Message/info';
 
 Vue.use(Router);
 
@@ -41,6 +42,11 @@ export const constantRoutes = [
         path: '/index',
         name: 'index',
         component: Home,
+      },
+      {
+        path: '/message/:id',
+        name: '/message/id',
+        component: MessageInfo,
       },
       {
         path: '/message',

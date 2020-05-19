@@ -16,6 +16,7 @@
 import BaseHeader from './components/Header/index';
 import BaseAside from './components/Aside/index';
 import BaseFooter from './components/Footer/index';
+import './style.scss'
 
 export default {
   name: 'App',
@@ -26,34 +27,3 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.main-wrap {
-  margin-bottom: 20px !important;
-  overflow: hidden;
-}
-.main-left {
-  width: 200px;
-
-  float: left;
-
-  padding-bottom: 2000px;
-  margin-bottom: -2000px;
-  margin-right: 20px;
-  background: #ffffff;
-}
-.main-right {
-  overflow: hidden;
-  padding-bottom: 2000px;
-  margin-bottom: -2000px;
-  .main-height {
-    min-height: 700px;
-    background: #ffffff;
-  }
-  .card {
-    margin-bottom: 20px;
-    padding: 20px;
-    background: #ffffff;
-  }
-  // background: #ffffff;
-}
-</style>

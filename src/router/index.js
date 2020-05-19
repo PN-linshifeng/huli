@@ -6,8 +6,7 @@ import Home from '@/views/Home';
 export const route = [
   {
     path: '/',
-
-    name: '首页',
+    // name: 'home',
     // redirect: { name: 'index' }, // 如果不做重定向控制台会警告
     component: BaseLayout, // 公共页头页尾
     children: [

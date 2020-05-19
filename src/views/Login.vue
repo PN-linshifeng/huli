@@ -88,6 +88,7 @@ export default {
     .login-bg{
         width: 100vw;
         height: 100vh;
+        overflow: hidden;
     }
     .login-layout {
         position: absolute;

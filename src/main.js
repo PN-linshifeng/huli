@@ -82,9 +82,10 @@ import './assets/theme/index.css';
 import router from './router/index'; // eslint-disable-line
 import App from './App';
 import store from './store/index';
+import './assets/font/iconfont.css';
 
 // style
-import './assets/style.scss';
+import './assets/scss/style.scss';
 
 Vue.use(Pagination);
 Vue.use(Dialog);

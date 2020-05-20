@@ -1,5 +1,5 @@
 <template>
-  <router-view class="view-page"></router-view>
+  <router-view class="view-page" />
 </template>
 <script>
 export default {

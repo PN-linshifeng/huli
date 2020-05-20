@@ -56,7 +56,12 @@ export const constantRoutes = [
       {
         path: '/myworks',
         name: '/myworks',
-        component: () => import('@/views/WorkManage/MyWorks/MyWorks.vue')
+        component: () => import('@/views/WorkManage/MyWorks/MyWorks.vue'),
+      },
+      {
+        path: '/datacenter',
+        name: '/datacenter',
+        component: () => import('@/views/DataCenter/list.vue'),
       },
     ],
   },

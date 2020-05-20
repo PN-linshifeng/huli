@@ -9,14 +9,22 @@
     float: left;
     width: 180px;
     text-align: center;
+
     img {
       vertical-align: middle;
+      margin-right: 8px;
+    }
+    span {
+      font-size: 20px;
+      line-height: 1;
+      font-weight: bold;
     }
   }
   .right {
     text-align: right;
     img {
       vertical-align: middle;
+      margin-right: 8px;
     }
     a {
       margin: 0px 15px;

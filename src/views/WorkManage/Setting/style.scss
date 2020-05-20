@@ -1,0 +1,37 @@
+@import '~/../../../../assets/scss/variable.scss';
+
+.work-setting{
+    .page-title{
+        padding: 1rem 1.5rem;
+        background-color: #fff;
+        margin-bottom: 1rem;
+        .current-page {
+            font-weight: bold;
+        }
+    }
+    .work-info{
+        background-color: #fff;
+        padding: 1.5rem 1rem;
+        .work-pic {
+            margin: 2rem 0 1rem;
+            text-align: center;
+        }
+        .edit-msg{
+            .el-form-item{
+                margin-bottom: .5rem;
+            }
+            .el-tag{
+                margin: 0 .2rem;
+            }
+            .add-btn{
+                margin-left: 2rem;
+            }
+            .edit-btn{
+                padding: .5rem 2rem;
+            }
+            .cancel-btn{
+                background-color: #aaa;
+            }
+        }
+    }
+}

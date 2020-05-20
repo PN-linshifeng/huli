@@ -1,0 +1,27 @@
+.work-create {
+  .page-title {
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    .current-page {
+      font-weight: bold;
+    }
+  }
+  .creat-info {
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    .el-steps {
+      background-color: #fff;
+    }
+  }
+  .create-btn {
+		text-align: center;
+    .el-button {
+      padding: 0.5rem 2rem;
+		}
+		.info-btn {
+			color: #fff;
+			background-color: #aaa;
+		}
+  }
+}

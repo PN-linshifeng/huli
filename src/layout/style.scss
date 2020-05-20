@@ -14,8 +14,8 @@
 }
 .main-right {
   overflow: hidden;
-  padding-bottom: 2000px;
-  margin-bottom: -2000px;
+  padding-bottom: 125rem /* 2000/16 */;
+  margin-bottom: -125rem;
   .main-height {
     min-height: 700px;
     background: #ffffff;
@@ -25,5 +25,5 @@
     padding: 20px;
     background: #ffffff;
   }
-  background: #ffffff;
+  // background: #ffffff;
 }

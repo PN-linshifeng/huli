@@ -1,0 +1,48 @@
+@import '~/../../../assets/scss/variable.scss';
+
+.my-works{
+    position: relative;
+    padding: 1.5rem 1rem 0;
+    background-color: #fff;
+    .creat-new{
+        position: absolute;
+        right: 1rem;
+        z-index: 2;
+    }
+    .work-pic{
+        float: left;
+        margin-right: .5rem;
+        max-width: 30%;
+    }
+    .work-desc{
+        p{
+            font-size: $font-medium;
+            color: $dark-text;
+            line-height: 2;
+        }
+        .work-word{
+            color: $color-text;
+            line-height: 3;
+        }
+    }
+    .work-tag{
+        text-align: right;
+        .el-tag{
+            margin: 0 .2rem;
+        }
+    }
+    .work-opera{
+        text-align: right;
+        margin-top: 4rem;
+    }
+    // 无作品时样式
+    .nowork-tips{
+        font-size: $font-small /* 12/16 */;
+    }
+    .noworks-area{
+        text-align: center;
+        img{
+            max-width: 30%;
+        }
+    }
+}

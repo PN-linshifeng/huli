@@ -56,7 +56,17 @@ export const constantRoutes = [
       {
         path: '/myworks',
         name: '/myworks',
-        component: () => import('@/views/WorkManage/MyWorks/MyWorks.vue'),
+        component: () => import('@/views/WorkManage/MyWorks.vue'), // 作品列表
+      },
+      {
+        path: '/myworks/setting:id',
+        name: 'worksetting',
+        component: () => import('@/views/WorkManage/Setting/WorkSetting.vue'), // 作品设置
+      },
+      {
+        path: '/myworks/create',
+        name: 'create',
+        component: () => import('@/views/WorkManage/Create/WorkCreate.vue'), // 创建作品
       },
       {
         path: '/datacenter',

@@ -73,6 +73,16 @@ export const constantRoutes = [
         name: '/datacenter',
         component: () => import('@/views/DataCenter/list.vue'),
       },
+      {
+        path: '/incomes',
+        name: '/incomes',
+        component: () => import('@/views/Incomes/index.vue'),
+      },
+      {
+        path: '/reward',
+        name: '/reward',
+        component: () => import('@/views/Incomes/reward.vue'),
+      },
     ],
   },
   {

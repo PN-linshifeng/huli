@@ -1,6 +1,13 @@
 <template>
   <header class="head-tag">
-    <h1>{{ title }}</h1>
+    <div class="tabs">
+      <router-link
+        v-for="k of data"
+        :key="k.path"
+        :to="k.path||''"
+        :class="k.active&&'active'"
+      >{{ k.title }}</router-link>
+    </div>
     <slot />
   </header>
 </template>
@@ -8,13 +15,9 @@
 import './style.scss';
 export default {
   props: {
-    title: {
+    data: {
       required: true,
-      type: String,
-    },
-    style: {
-      type: String,
-      default: '',
+      type: Array,
     },
   },
 };

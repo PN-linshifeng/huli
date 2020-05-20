@@ -13,7 +13,9 @@
         </router-link>
         <router-link to="/message">
           <img src="../../../assets/images/huli_11.png" alt="消息" />
-          消息
+          <span>消息</span>
+          <el-badge :value="9" class="mark" />
+
         </router-link>
         <router-link to="/">
           <div class="avatar">

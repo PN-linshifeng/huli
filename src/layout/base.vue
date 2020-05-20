@@ -28,32 +28,22 @@ export default {
 </script>
 <style lang="scss">
 .main-wrap {
-  margin-bottom: 20px !important;
+  margin-bottom: 1.25rem /* 20/16 */ !important;
   overflow: hidden;
 }
 .main-left {
-  width: 200px;
-
+  width: 12.5rem /* 200/16 */;
   float: left;
 
-  padding-bottom: 2000px;
-  margin-bottom: -2000px;
+  padding-bottom: 125rem /* 2000/16 */;
+  margin-bottom: -125rem /* 2000/16 */;
   margin-right: 20px;
   background: #ffffff;
 }
 .main-right {
   overflow: hidden;
-  padding-bottom: 2000px;
-  margin-bottom: -2000px;
-  .main-height {
-    min-height: 700px;
-    background: #ffffff;
-  }
-  .card {
-    margin-bottom: 20px;
-    padding: 20px;
-    background: #ffffff;
-  }
-  // background: #ffffff;
+  padding: 1.5rem 1rem 125rem /* 2000/16 */;
+  margin-bottom: -125rem /* 2000/16 */;
+  background: #ffffff;
 }
 </style>

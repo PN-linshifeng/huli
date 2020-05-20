@@ -47,12 +47,17 @@ export const constantRoutes = [
         name: '/message',
         component: MessageList,
       },
+      {
+        path: '/myworks',
+        name: '/myworks',
+        component: () => import('@/views/WorkManage/MyWorks/MyWorks.vue')
+      },
     ],
   },
   {
     path: '/login',
     name: 'Login',
-    component: () => import('@/views/Login'),
+    component: () => import('@/views/Login/Login.vue'),
   },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true },

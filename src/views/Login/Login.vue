@@ -5,7 +5,7 @@
         <el-row>
           <!-- 图片 -->
           <el-col :md="10">
-            <img :src="require('../assets/images/login.png')" class="left-image" />
+            <img :src="require('../../assets/images/login.png')" class="left-image" />
           </el-col>
           <!-- 输入框 -->
           <el-col :md="8" class="login-area">
@@ -71,6 +71,8 @@
 </template>
 
 <script>
+import './style.scss';
+
 export default {
   name: 'Login',
   data() {
@@ -101,69 +103,3 @@ export default {
   },
 };
 </script>
-
-<style lang='scss' scoped>
-.login {
-    .login-bg {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
-    .login-layout {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        .left-image {
-            max-width: 100%;
-            margin-bottom: -5rem;
-        }
-        .remberUser {
-            margin: 0;
-        }
-        .login-area,
-        .forget-word {
-            float: right;
-        }
-        .login-area {
-            padding: 1rem 2rem;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 0.2rem 0 #ccc;
-        }
-        .login-button {
-            width: 100%;
-        }
-        .captcha-get {
-            .el-form-item__content {
-                line-height: 1;
-            }
-            .el-input {
-                width: 60%;
-            }
-            .el-button {
-                float: right;
-                background-color: #ccc;
-            }
-        }
-    }
-}
-</style>
-<style lang="scss">
-.login {
-    .el-form-item {
-        margin-bottom: 1rem;
-    }
-    .captcha-get {
-        .el-form-item__content {
-            line-height: 1;
-        }
-    }
-    .el-tabs__nav-wrap::after {
-        content: none;
-    }
-    .el-button {
-        padding: 0.5rem /* 9/16 */;
-    }
-}
-</style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card data-center">
-      <head-tag title="数据统计" class="aaaa" />
+      <head-tag :data="[{title:'稿酬统计',active:true}]" />
       <div class="select-box">
         <div class="img">
           <img src="../../assets/images/book.png" alt="xxx" />
@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="card data-center">
-      <head-tag title="数据明细">
+      <head-tag :data="[{title:'数据明细',active:true}]">
         <el-row class="main">
           <el-col :xs="12" :sm="12">
             <el-select v-model="queryTimeArticle" placeholder="请选择" size="mini" style="width:100px">
@@ -73,7 +73,13 @@
         </el-row>
       </head-tag>
       <div class="list">
-        <el-table :data="tableData" border style="width: 100%" class="margin-bottom">
+        <el-table
+          :data="tableData"
+          border
+          style="width: 100%"
+          class="margin-bottom"
+          :header-cell-style="{background:'#F5F7FA',color:'#606266'}"
+        >
           <el-table-column prop="article" label="章节名称" />
           <el-table-column prop="size" label="章节字数" />
           <el-table-column prop="date" label="发布时间" />

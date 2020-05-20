@@ -9,10 +9,10 @@
       </div>
       <div class="right">
         <router-link to="/">
-          <img src="../../../assets/images/fuli.png" alt="作者福利" width="18" />作者福利
+          <img src="../../../assets/images/fuli.png" alt="作者福利" width="18" height="18" />作者福利
         </router-link>
         <router-link to="/message">
-          <img src="../../../assets/images/message.png" alt="消息" width="18" />
+          <img src="../../../assets/images/message.png" alt="消息" width="18" height="18" />
           <span>消息</span>
           <el-badge :value="9" class="mark" />
         </router-link>

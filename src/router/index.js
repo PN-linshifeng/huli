@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import BaseLayout from '@/layout/base';
-import Home from '@/views/Home';
 import MessageList from '@/views/Message/list';
 import MessageInfo from '@/views/Message/info';
 
@@ -41,7 +40,7 @@ export const constantRoutes = [
       {
         path: '/index',
         name: 'index',
-        component: Home,
+        component: () => import('@/views/Home/Home.vue') // 工作台
       },
       {
         path: '/message/:id',
@@ -56,12 +55,12 @@ export const constantRoutes = [
       {
         path: '/myworks',
         name: '/myworks',
-        component: () => import('@/views/WorkManage/MyWorks.vue'), // 作品列表
+        component: () => import('@/views/WorkManage/MyWorks.vue') // 作品列表
       },
       {
         path: '/myworks/setting:id',
         name: 'worksetting',
-        component: () => import('@/views/WorkManage/Setting/WorkSetting.vue'), // 作品设置
+        component: () => import('@/views/WorkManage/Setting/WorkSetting.vue') // 作品设置
       },
       {
         path: '/myworks/create',

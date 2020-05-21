@@ -77,6 +77,7 @@ import {
   MessageBox,
   Message,
   Notification,
+  Avatar,
 } from 'element-ui';
 import './assets/theme/index.css';
 import router from './router/index'; // eslint-disable-line
@@ -160,6 +161,7 @@ Vue.use(Calendar);
 Vue.use(Backtop);
 Vue.use(PageHeader);
 Vue.use(CascaderPanel);
+Vue.use(Avatar);
 
 Vue.use(Loading.directive);
 

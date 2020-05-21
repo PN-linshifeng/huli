@@ -83,6 +83,34 @@ export const constantRoutes = [
         name: '/reward',
         component: () => import('@/views/Incomes/reward.vue'),
       },
+      {
+        path: '/user',
+        name: '/user',
+        redirect: { name: '/user/info' },
+        component: () => import('@/views/User/BaseView.vue'),
+        children: [
+          {
+            path: '/user/info',
+            name: '/user/info',
+            component: () => import('@/views/User/Info.vue'),
+          },
+          {
+            path: '/user/detailed',
+            name: '/user/detailed',
+            component: () => import('@/views/User/Detailed.vue'),
+          },
+          {
+            path: '/user/password',
+            name: '/user/password',
+            component: () => import('@/views/User/Password.vue'),
+          },
+          {
+            path: '/user/bankcard',
+            name: '/user/bankcard',
+            component: () => import('@/views/User/BankCard.vue'),
+          },
+        ],
+      },
     ],
   },
   {

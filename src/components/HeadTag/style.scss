@@ -15,7 +15,7 @@
   }
   .tabs {
     float: left;
-    font-size: 1.4em;
+    font-size: 1.3rem;
     position: relative;
     margin-right: 24px;
     a {
@@ -25,7 +25,7 @@
       &:not(:last-child) {
         margin-right: 24px;
       }
-      &.active::after,
+      &.router-link-active::after,
       &:hover::after {
         content: '';
         position: absolute;

@@ -4,6 +4,7 @@
   margin-bottom: 1.25rem /* 20/16 */;
   border-bottom: 1px solid #e8e8e8;
   background: #ffffff;
+  font-size: 1rem;
 
   .logo {
     float: left;
@@ -35,6 +36,12 @@
   }
   .avatar {
     display: inline-block;
+    line-height: 1;
+    cursor: pointer;
+    margin: 0px 15px;
+
+    font-size: inherit;
+
     img {
       width: 35px;
       height: 35px;

@@ -1,0 +1,54 @@
+@import '../../assets/scss/variable.scss';
+
+.user-page {
+  .avatar {
+    vertical-align: middle;
+    margin-right: 24px;
+  }
+  .el-form-item__label,
+  .el-form-item__content {
+    font-size: inherit;
+  }
+  .infoForm {
+    margin: 0 auto;
+    padding-top: 40/16 * 1rem;
+    max-width: 700px;
+  }
+  .padding:not(:last-child) {
+    padding-right: 8/16 * 1rem;
+  }
+  .tel-box {
+    > div,
+    a {
+      margin-right: (24/16) * 1rem;
+    }
+    .telRegion {
+      width: 150px;
+    }
+    .tel {
+      width: 150px;
+    }
+    .code {
+      width: 80px;
+      text-align: center;
+    }
+  }
+  .dialog-success,
+  .dialog-error {
+    text-align: center;
+    .el-dialog__body {
+      padding-top: 0px;
+    }
+    .el-icon-circle-check,
+    .el-icon-warning-outline {
+      font-size: 35px;
+      color: $green-text;
+    }
+    .el-icon-warning-outline {
+      color: red;
+    }
+    .txt {
+      padding: 1rem 0;
+    }
+  }
+}

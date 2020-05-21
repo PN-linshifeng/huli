@@ -15,17 +15,23 @@
   }
   .tabs {
     float: left;
-    font-size: 1.4em;
+    font-size: 1.2rem;
     position: relative;
     margin-right: 24px;
-    a {
+    a,
+    h3 {
       position: relative;
       display: inline-block;
+      font-weight: 700;
       height: 100%;
+      color: #999;
       &:not(:last-child) {
-        margin-right: 24px;
+        margin-right: 36px;
       }
-      &.active::after,
+      &.router-link-active {
+        color: #333333;
+      }
+      &.router-link-active::after,
       &:hover::after {
         content: '';
         position: absolute;

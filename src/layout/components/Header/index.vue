@@ -16,12 +16,26 @@
           <span>消息</span>
           <el-badge :value="9" class="mark" />
         </router-link>
-        <router-link to="/">
-          <div class="avatar">
+
+        <el-dropdown class="avatar">
+          <div>
             <img src="../../../assets/images/avatar.png" alt="xxx头像" />
             用户xxx
           </div>
-        </router-link>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>
+              <router-link to="/myworks" title="作品管理">作品管理</router-link>
+            </el-dropdown-item>
+            <el-dropdown-item>
+              <router-link to="/myworks" title="立即写作">立即写作</router-link>
+            </el-dropdown-item>
+            <el-dropdown-item>
+              <router-link to="/user/info" title="个人资料">个人资料</router-link>
+            </el-dropdown-item>
+            <el-dropdown-item divided>退出登录</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+
         <div />
       </div>
     </div>

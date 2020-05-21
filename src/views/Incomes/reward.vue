@@ -1,7 +1,7 @@
 <template>
   <div class="incomes-page">
     <div class="card">
-      <head-tag :data="[{title:'稿酬统计',path:'/incomes'},{title:'奖励统计',path:'/reward',active:true}]" />
+      <head-tag :data="[{title:'稿酬统计',path:'/incomes'},{title:'奖励统计',path:'/reward'}]" />
       <div class="search-box">
         <el-form ref="search" :data="searchForm" inline>
           <el-form-item label="查看方式：" />

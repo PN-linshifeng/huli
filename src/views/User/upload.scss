@@ -1,15 +1,52 @@
-.cut {
-  width: 500px;
-  height: 380px;
+.edit-avatar-box {
+  // overflow: hidden;
 }
-.slider-box {
-  display: inline-block;
-  width: 200px;
-  margin: 0 24px;
-  vertical-align: middle;
+.edit {
+  float: left;
+  margin-right: 24/16 * 1rem;
+  .el-button {
+    margin-right: 24/16 * 1rem;
+  }
+  .cut {
+    width: 500px;
+    height: 380px;
+    margin-bottom: 24/16 * 1rem;
+  }
+  .edit-control {
+    text-align: center;
+    margin-bottom: 30/16 * 1rem;
+  }
+  .slider-box {
+    display: inline-block;
+    width: 200px;
+    margin: 0 24px;
+    vertical-align: middle;
+  }
+}
+.edit-right {
+  overflow: hidden;
+}
+.avatar-list {
+  margin-bottom: 80/16 * 1rem;
+  .avatara {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  h3,
+  .item {
+    margin-bottom: 24/16 * 1rem;
+  }
+  .el-avatar {
+    margin-right: 24/16 * 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .edit-control {
   font-size: 24px;
   color: #fc4545;
+}
+.el-dialog__body {
+  padding-top: 15px;
 }

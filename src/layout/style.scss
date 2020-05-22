@@ -3,19 +3,15 @@
   overflow: hidden;
 }
 .main-left {
-  width: 200px;
-
-  float: left;
-
-  padding-bottom: 2000px;
-  margin-bottom: -2000px;
-  margin-right: 20px;
+  // position: fixed;
+  height: 100vh;
   background: #ffffff;
 }
 .main-right {
   overflow: hidden;
-  padding-bottom: 125rem /* 2000/16 */;
-  margin-bottom: -125rem;
+  padding-left: 2rem;
+  // padding-bottom: 125rem /* 2000/16 */;
+  // margin-bottom: -125rem;
   .main-height {
     min-height: 700px;
     background: #ffffff;

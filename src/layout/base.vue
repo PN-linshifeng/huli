@@ -1,14 +1,14 @@
 <template>
   <div class="has-topber has-aside">
     <base-header />
-    <div class="container main-wrap">
-      <div class="main-left">
+    <el-row class="container main-wrap">
+      <el-col :md="4" class="main-left">
         <base-aside />
-      </div>
-      <div class="main-right">
+      </el-col>
+      <el-col :md="20" class="main-right">
         <router-view class="view-page" />
-      </div>
-    </div>
+      </el-col>
+    </el-row>
     <base-footer />
   </div>
 </template>

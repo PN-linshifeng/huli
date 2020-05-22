@@ -1,11 +1,12 @@
 <template>
   <div>
+    <upload />
     <el-form ref="infoForm" :data="info" label-width="100px" class="infoForm">
       <el-form-item label="您的头像：">
         <div class="img">
           <!-- <img src="../../assets/images/avatar.png" alt /> -->
           <el-avatar :src="info.avatar" :size="70" class="avatar" />
-          <el-button v-if="isEdit">上传新头像</el-button>
+          <el-button v-if="isEdit" @click="handleShowUploadImage">上传新头像</el-button>
         </div>
       </el-form-item>
       <el-form-item label="作者笔名：">
@@ -95,9 +96,13 @@
         <el-button type="primary" size="small" @click="errorVisible = false">确 认</el-button>
       </div>
     </el-dialog>
+
   </div>
+
 </template>
 <script>
+import upload from './upload.vue'
+
 const cityList = [
   {
     value: 'gd',
@@ -169,6 +174,7 @@ const cityList = [
   },
 ];
 export default {
+  components: { upload },
   data() {
     return {
       isEdit: false,
@@ -193,6 +199,7 @@ export default {
       },
       successVisible: false,
       errorVisible: false,
+
     };
   },
   methods: {
@@ -213,6 +220,9 @@ export default {
       this.isEdit = !this.isEdit;
       this.successVisible = true;
     },
+    handleShowUploadImage() {
+      this.showUploadImage = true
+    }
   },
 };
 </script>

@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="opera-button">
-        <el-button size="mini">彻底删除</el-button>
+        <el-button size="mini" class="removeComplete">彻底删除</el-button>
         <el-button size="mini">恢复到草稿</el-button>
       </div>
     </div>
@@ -22,6 +22,11 @@ import './style.scss';
 export default {
   components: {
     ChapterView
+  },
+  methods: {
+    removeComplete() {
+
+    }
   }
 }
 </script>

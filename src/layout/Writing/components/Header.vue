@@ -1,14 +1,12 @@
 <template>
   <div class="writing-header">
     <el-row>
-      <el-col :span="3" class="writing-alink">
-        <router-link to="/index">
+      <el-col :span="12">
+        <router-link to="/index" class="writing-alink">
           <img src="../../../assets/images/logo.png" alt="狐狸写作平台" class="writing-logo" />
         </router-link>
-      </el-col>
-      <el-col :span="12">
-        <!-- <el-divider direction="vertical" /> -->
-        <p class="book-name">作品：《{{ bookname }}》</p>
+        <el-divider direction="vertical" />
+        <p class="book-name">作品《{{ bookname }}》</p>
       </el-col>
       <el-col :span="3">
         <router-link :to="`/writing/${bookname}/draft`" tag="div" :class="pathType === '0' ? 'book-bin active-bg' : 'book-bin'">

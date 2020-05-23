@@ -134,7 +134,7 @@ export const constantRoutes = [
         name: 'draft',
         component: () => import('@/views/Writing/Draft/Draft.vue'),
         children: [
-          { path: '/writing/:bookname/draft/:id',
+          { path: '/writing/:bookname/draft/:id?',
             name: 'draftview',
             component: () => import('@/views/Writing/Draft/index.vue')
           }
@@ -145,7 +145,7 @@ export const constantRoutes = [
         name: 'recycle',
         component: () => import('@/views/Writing/Recycle/Recycle.vue'),
         children: [
-          { path: '/writing/:bookname/recycle/:id',
+          { path: '/writing/:bookname/recycle/:id?',
             name: 'recycleview',
             component: () => import('@/views/Writing/Recycle/index.vue')
           }
@@ -156,7 +156,7 @@ export const constantRoutes = [
         name: 'published',
         component: () => import('@/views/Writing/Published/Published.vue'),
         children: [
-          { path: '/writing/:bookname/published/:id',
+          { path: '/writing/:bookname/published/:id?',
             name: 'publishedview',
             component: () => import('@/views/Writing/Published/index.vue')
           }

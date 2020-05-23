@@ -42,9 +42,6 @@ export default {
       type: String,
       required: true
     }
-  },
-  created() {
-    console.log(this.path);
   }
 };
 </script>

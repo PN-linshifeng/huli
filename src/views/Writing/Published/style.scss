@@ -7,7 +7,7 @@
     .total-capters {
       padding: 0 1.25rem;
       font-size: 0.75rem;
-      line-height: 3;
+      line-height: 3.7;
       .new-chapter-btn{
         padding: .3rem .5rem;
         margin-left: .2rem;
@@ -20,7 +20,8 @@
   }
   .writing-main {
     .opera-area {
-      line-height: 3;
+      height: 3.75rem;
+      line-height: 3.75rem /* 60/16 */;
       padding: 0 2rem;
         background-color: #fff;
       @extend %clearfix;
@@ -35,10 +36,35 @@
         float: right;
       }
     }
-    .write-tip{
-      font-size: $font-small;
-      padding: .2rem 2rem;
-      background-color: #f6f7f9;
+  }
+}
+
+// dialog
+.writing-dialog{
+  .delete-dialog,
+  .create-dialog{
+    text-align: center;
+    .el-icon-warning-outline{
+      color: #fc4545;
+      font-size: 3.75rem;
+      margin-bottom: 1rem;
+    }
+    .el-button{
+      width: 8.125rem /* 130/16 */;
+    }
+    .cancel-btn{
+      color: $color-text;
+    }
+  }
+
+  .create-dialog{
+    .title {
+      margin-bottom: 1.5rem;
+    }
+    .el-input{
+      width: auto;
+      min-width: 15rem;
+      margin-bottom: 1rem;
     }
   }
 }

@@ -29,7 +29,7 @@
         <el-button size="mini">删除</el-button>
         <el-button size="mini">保存</el-button>
         <el-button size="mini" type="info">新建</el-button>
-        <el-button size="mini" type="primary">发布</el-button>
+        <el-button size="mini" type="primary" @click="publishWrite">发布</el-button>
       </div>
     </div>
     <chapter-view />
@@ -58,6 +58,10 @@ export default {
           { code: '11', name: '免费章节' }
         ]
       },
+    }
+  },
+  methods: {
+    publishWrite() {
     }
   }
 }

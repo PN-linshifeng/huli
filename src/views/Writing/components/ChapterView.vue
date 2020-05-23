@@ -1,9 +1,9 @@
 <template>
   <div class="chapter-view">
-    <p class="write-tip"><i class="el-icon-warning-outline" />tips:不能出现涉黄、涉政、涉爆、危害社会稳定、违反法律法规等有害信息的内容。</p>
+    <p class="write-tip"><i class="el-icon-warning-outline" />tips：不能出现涉黄、涉政、涉爆、危害社会稳定、违反法律法规等有害信息的内容。</p>
     <div class="chapter-content">
       <div class="chapter-title">
-        <h4>{{ viewData.title }}</h4>
+        <h2>{{ viewData.title }}</h2>
         <div class="little-msg"><span>标题<span class="red-text">{{ viewData.title.length }}</span>/20</span>&nbsp;
           <span>正文<span class="red-text">{{ viewData.word }}</span>字</span>
         </div>

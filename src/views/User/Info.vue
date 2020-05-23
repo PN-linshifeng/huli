@@ -1,12 +1,12 @@
 <template>
   <div>
-    <upload />
+
     <el-form ref="infoForm" :data="info" label-width="100px" class="infoForm">
       <el-form-item label="您的头像：">
         <div class="img">
           <!-- <img src="../../assets/images/avatar.png" alt /> -->
           <el-avatar :src="info.avatar" :size="70" class="avatar" />
-          <el-button v-if="isEdit" @click="handleShowUploadImage">上传新头像</el-button>
+          <el-button v-if="isEdit" @click="handleSwitchUpload">上传新头像</el-button>
         </div>
       </el-form-item>
       <el-form-item label="作者笔名：">
@@ -96,12 +96,14 @@
         <el-button type="primary" size="small" @click="errorVisible = false">确 认</el-button>
       </div>
     </el-dialog>
-
+    <el-dialog :visible.sync="dialogUploadVisible" title="头像设置" custom-class="dialog-upload">
+      <upload :url="info.avatar" :upload-image-loading="uploadImageLoading" :history-avatar="historyAvatar" @close="handleSwitchUpload" @uploadImage="uploadImage" />
+    </el-dialog>
   </div>
 
 </template>
 <script>
-import upload from './upload.vue'
+import upload from './Components/upload.vue'
 
 const cityList = [
   {
@@ -177,10 +179,15 @@ export default {
   components: { upload },
   data() {
     return {
-      isEdit: false,
-      cityList,
-      telRegion: '+86',
-      infoForm: {},
+      cityList, // 假城市数据
+      isEdit: false, // 编辑状态
+      telRegion: '+86', // 电话区号
+      infoForm: {}, // form 表单
+      // 历史头像
+      historyAvatar: ['https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg',
+        'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg',
+        'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg'],
+      // 假数据信息
       info: {
         avatar:
           'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg',
@@ -197,8 +204,10 @@ export default {
         email: '1515646@aa.com',
         telRegion: '+86',
       },
-      successVisible: false,
-      errorVisible: false,
+      successVisible: false, // 成功窗口
+      errorVisible: false, // 失败窗口
+      dialogUploadVisible: false, // 上传图片对话框
+      uploadImageLoading: false, // 提交上传图片状态
 
     };
   },
@@ -216,12 +225,27 @@ export default {
         this.infoForm = { ...this.info, address };
       }
     },
+    // 提交资料
     handleSubmit() {
       this.isEdit = !this.isEdit;
       this.successVisible = true;
     },
-    handleShowUploadImage() {
-      this.showUploadImage = true
+    // 上传图片对话框切换
+    handleSwitchUpload() {
+      this.dialogUploadVisible = !this.dialogUploadVisible;
+    },
+    // 上传图片方法
+    uploadImage(data) {
+      console.log('fileName:', data)
+      this.uploadImageLoading = true;
+      new Promise((resolve) => {
+        setTimeout(() => {
+          resolve('ok')
+        }, 2000)
+      }).then(() => {
+        this.handleSwitchUpload()
+        this.uploadImageLoading = false
+      })
     }
   },
 };

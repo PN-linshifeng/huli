@@ -23,7 +23,7 @@
             </div>
             <div class="work-opera">
               <el-button size="small">申请解禁</el-button>
-              <el-button size="small" type="primary">去写作</el-button>
+              <el-button size="small" type="primary" @click="goToWrite(item.name)">去写作</el-button>
               <el-button size="small">已发布</el-button>
               <el-button size="small" @click="editWork(item.id)">修改作品</el-button>
             </div>
@@ -66,7 +66,7 @@ export default {
           ]
         },
         {
-          name: '天王盖地虎-12345',
+          name: '天王盖地虎-88888',
           id: 1,
           pic: require('../../assets/images/book.png'),
           words: '33500',
@@ -82,6 +82,11 @@ export default {
     }
   },
   methods: {
+    goToWrite(val) {
+      if (val) {
+        this.$router.push(`/writing/${val}`)
+      }
+    },
     editWork(id) {
       this.$router.push(`/myworks/setting${id}`);
     },

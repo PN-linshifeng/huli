@@ -98,7 +98,7 @@
       width: 90%;
       font-size: $font-medium;
       vertical-align: middle;
-      @include nowrap();
+      @extend %nowrap;
     }
   }
 }

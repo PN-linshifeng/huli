@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import BaseLayout from '@/layout/base';
+import BaseLayout from '@/layout/base/base';
 import MessageList from '@/views/Message/list';
 import MessageInfo from '@/views/Message/info';
 
@@ -116,6 +116,53 @@ export const constantRoutes = [
     path: '/login',
     name: 'Login',
     component: () => import('@/views/Login/Login.vue'),
+  },
+  {
+    path: '/welfare',
+    name: 'welfare',
+    component: () => import('@/views/Welfare/Welfare.vue'),
+  },
+  {
+    path: '/writing/:bookname',
+    name: 'writing',
+    component: () => import('@/layout/Writing/Writing.vue'),
+    redirect: { name: 'draft' },
+    // props: (route) => ({ params: route.params.bookname }),
+    children: [
+      {
+        path: '/writing/:bookname/draft',
+        name: 'draft',
+        component: () => import('@/views/Writing/Draft/Draft.vue'),
+        children: [
+          { path: '/writing/:bookname/draft/:id',
+            name: 'draftview',
+            component: () => import('@/views/Writing/Draft/index.vue')
+          }
+        ]
+      },
+      {
+        path: '/writing/:bookname/recycle',
+        name: 'recycle',
+        component: () => import('@/views/Writing/Recycle/Recycle.vue'),
+        children: [
+          { path: '/writing/:bookname/recycle/:id',
+            name: 'recycleview',
+            component: () => import('@/views/Writing/Recycle/index.vue')
+          }
+        ]
+      },
+      {
+        path: '/writing/:bookname/published',
+        name: 'published',
+        component: () => import('@/views/Writing/Published/Published.vue'),
+        children: [
+          { path: '/writing/:bookname/published/:id',
+            name: 'publishedview',
+            component: () => import('@/views/Writing/Published/index.vue')
+          }
+        ]
+      }
+    ]
   },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true },

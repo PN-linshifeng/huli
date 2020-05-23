@@ -1,0 +1,66 @@
+@import '../../../assets/scss/variable.scss';
+
+.writing-aside {
+  min-height: 28rem;
+  .el-menu {
+    border-right: none;
+  }
+  .menu-wrapper {
+    .el-menu-item,
+    .el-submenu__title {
+      padding-left: 20px !important;
+      padding-right: 1rem;
+      height: auto;
+      line-height: 1.2;
+      &.is-active {
+        background: #f6f7f9;
+        color: #303133;
+        border-left: 3px solid #fc4545;
+      }
+    }
+    .menu-item-content {
+      padding: 0.5rem 0;
+      @extend %clearfix;
+    }
+    .menu-item-desc {
+      color: $color-text;
+      font-size: $font-small;
+      line-height: 1.5;
+      float: right;
+      &:first-child {
+        float: left;
+      }
+    }
+  }
+}
+
+.chapter-view {
+  .write-tip{
+    font-size: $font-small;
+    padding: .2rem 2rem;
+    background-color: #f6f7f9;
+  }
+  .chapter-content {
+    min-height: 25.5rem;
+    background-color: #fff;
+    padding: 0 2rem;
+    .chapter-title {
+      line-height: 3;
+      @extend %clearfix;
+      h4 {
+        float: left;
+      }
+      .little-msg {
+        float: right;
+        line-height: 4;
+        font-size: $font-small;
+        .red-text {
+          color: #fc4545;
+        }
+      }
+    }
+    .el-divider {
+      margin: 0.5rem 0;
+    }
+  }
+}

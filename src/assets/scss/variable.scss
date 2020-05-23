@@ -10,7 +10,7 @@ $green-text: #67C23A; // 绿色
 $color-background-line: #EBEEF5; // 分割线颜色
 
 //字体定义规范
-$font-small-s: .625rem /* 10/16 */;
+$font-mini: .625rem /* 10/16 */;
 $font-small: .75rem /* 12/16 */;
 $font-medium: .875rem /* 14/16 */;
 $font-medium-x: 1rem /* 16/16 */;
@@ -32,7 +32,7 @@ $font-icon-nomarl: 2.5rem /* 40/16 */;
 }
 
 // 单行不换行
-@mixin nowrap() {
+%nowrap {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

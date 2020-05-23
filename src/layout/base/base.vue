@@ -13,9 +13,9 @@
   </div>
 </template>
 <script>
-import BaseHeader from './components/Header/index';
-import BaseAside from './components/Aside/index';
-import BaseFooter from './components/Footer/index';
+import BaseHeader from './../components/Header/index';
+import BaseAside from './../components/Aside/index';
+import BaseFooter from './../components/Footer/index';
 import './style.scss'
 
 export default {

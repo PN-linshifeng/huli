@@ -1,0 +1,33 @@
+@import '../../../assets/scss/variable.scss';
+
+.reword-content {
+  .title {
+    width: 10rem;
+    color: #fff;
+    margin: 1rem auto;
+    text-align: center;
+    background: url('../../../assets/images/welfare_tbg.png') no-repeat center;
+    background-size: 100% 100%;
+  }
+  .reword-list {
+    margin-bottom: .5rem;
+    @extend %clearfix;
+    .item-title {
+      width: 7rem;
+      float: left;
+      h4{
+        display: inline;
+        margin-left: .5rem;
+      }
+    }
+    p{
+      // margin-left: 7rem;
+      color: $color-text;
+    }
+    .el-table{
+      max-width: 36.875rem /* 590/16 */;
+      // min-width: 30rem /* 480/16 */;
+      border: 1px solid #dbdedb;
+    }
+  }
+}

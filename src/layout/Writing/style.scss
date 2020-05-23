@@ -1,0 +1,12 @@
+@import '../../assets/scss/variable.scss';
+
+.writing-layout {
+  height: 6.25rem /* 100/16 */;
+  margin-bottom: 1.25rem;
+  background-color: #fff;
+  .writing-area {
+    width: 100%;
+    max-width: 75rem /* 1200/16 */;
+    margin: 0 auto 0.5rem;
+  }
+}

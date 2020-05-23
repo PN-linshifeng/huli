@@ -8,7 +8,7 @@
         </router-link>
       </div>
       <div class="right">
-        <router-link to="/">
+        <router-link to="/welfare">
           <img src="../../../assets/images/fuli.png" alt="作者福利" width="18" height="18" />作者福利
         </router-link>
         <router-link to="/message">

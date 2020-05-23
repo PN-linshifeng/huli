@@ -1,0 +1,33 @@
+@import '../../../assets/scss/variable.scss';
+
+.writing-draft {
+  .writing-asider {
+    padding: 0!important;
+    background-color: #fff;
+    .total-capters {
+      padding: 0 1.25rem;
+      font-size: 0.75rem;
+      line-height: 3;
+    }
+    .el-divider--horizontal {
+      width: auto;
+      margin: 0 1.25rem /* 20/16 */;
+    }
+  }
+  .writing-main {
+    .opera-area {
+      line-height: 3;
+      padding: 0 2rem;
+        background-color: #fff;
+      @extend %clearfix;
+      .opera-button {
+        float: right;
+      }
+    }
+    .write-tip{
+      font-size: $font-small;
+      padding: .2rem 2rem;
+      background-color: #f6f7f9;
+    }
+  }
+}

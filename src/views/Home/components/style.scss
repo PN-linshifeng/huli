@@ -9,8 +9,10 @@
 // }
 
 .calendar {
-  width: 100%;
-  background-color: #fff;
+  // width: 100%;
+  padding: 0 1rem 1.5rem;
+  background: url('../../../assets/images/calendar_bg.png') no-repeat center;
+  background-position: 100% 100%;
   @extend %clearfix;
   .dateSelect {
     float: right;
@@ -20,12 +22,13 @@
     }
   }
   .calendar__main {
+    @extend %clearfix;
     .main__block {
       float: left;
-      width: 14%;
-      line-height: 2;
+      width: 10%;
+      line-height: 1.5rem;
+      margin: 0.3rem 2%;
       text-align: center;
-      margin-bottom: 1rem;
       border-radius: 2px;
       font-size: 12px;
       color: $dark-text;
@@ -40,15 +43,15 @@
         bottom: 0;
       }
     }
-    .main__block-not {
-      background-color: #edf2f5;
-      color: #7f8fa4;
-    }
-    .main__block-today {
+    .main__block-notWriting {
       transition: 0.5s all;
-      background-color: #f93d3a;
-      color: #fff;
+      background-color: #d0dffc;
+      color: #737579;
       box-shadow: 0 2px 6px rgba(171, 171, 171, 0.5);
+    }
+    .main__block-write {
+      background-color: #fc4545;
+      color: #fff;
     }
     .main__block-head {
       width: 100%;
@@ -64,11 +67,43 @@
       }
     }
   }
+  .bottom-info {
+    font-size: $font-small;
+    line-height: 2.5;
+    @extend %clearfix;
+    .mark-info {
+      float: left;
+      .color-circle-0,
+      .color-circle-1 {
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin: 0 .2rem;
+        background-color: #d0dffc;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+      .color-circle-1{
+        background: #fc4545;
+        margin-left: 1.5rem;
+      }
+    }
+    .info-text {
+      float: right;
+      .red-text{
+        color: #fc4545;
+      }
+    }
+  }
 }
 
 .web-announce {
   position: relative;
   background-color: #fff;
+  margin-top: 1rem;
   padding: 0 1rem 2rem;
   .more-btn {
     position: absolute;

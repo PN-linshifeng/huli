@@ -42,7 +42,7 @@
       }
     }
     .create-msg {
-      margin: 0.5rem 0;
+      padding: 1rem 0;
       @extend %clearfix;
       .msg-box {
         float: left;
@@ -52,13 +52,13 @@
           line-height: 2;
         }
       }
-      .el-divider {
-        margin: 0.5rem 0;
-      }
+    }
+    .el-divider {
+      margin: 0;
     }
   }
   .writing-cal {
     float: right;
-    background-color: #fff;
+    // background-color: #fff;
   }
 }

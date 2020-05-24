@@ -2,7 +2,7 @@
 
 .my-works {
   position: relative;
-  padding: 1.5rem 1rem 0;
+  padding: 1.5rem 1rem;
   background-color: #fff;
   .creat-new {
     position: absolute;
@@ -44,5 +44,8 @@
     img {
       max-width: 30%;
     }
+  }
+  .el-pagination{
+    text-align: right;
   }
 }

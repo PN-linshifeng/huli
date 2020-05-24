@@ -31,6 +31,13 @@
         </el-row>
         <el-divider />
       </div>
+      <el-pagination
+        :current-page="currentPage"
+        :page-size="5"
+        layout="total, prev, next, jumper"
+        :total="2"
+        @current-change="handleCurrentChange"
+      />
     </div>
     <div v-else class="noworks-area">
       <img src="../../assets/images/nowork.png" alt="未有作品" />
@@ -78,10 +85,14 @@ export default {
             { label: '科幻', type: 'info' }
           ]
         }
-      ]
+      ],
+      currentPage: 1
     }
   },
   methods: {
+    handleCurrentChange(val) {
+      this.currentPage = val;
+    },
     goToWrite(val) {
       if (val) {
         this.$router.push(`/writing/${val}`)

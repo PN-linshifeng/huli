@@ -8,7 +8,7 @@
     </div> -->
     <head-tag :data="headData">
       <div class="dateSelect">
-        <el-select v-model="jumpYear" size="small">
+        <el-select v-model="jumpYear" size="small" >
           <el-option v-for="(a, index) in selectYears" :key="index" :label="`${a}年`" :value="a" />
         </el-select>
         <el-select v-model="jumpMonth" size="small">
@@ -24,11 +24,17 @@
         >{{ item }}</div>
       </div>
       <div
-        v-for="(item, index) in displayDaysPerMonthT(selectedYear)[selectedMonth]"
+        v-for="(item, index) in calendarArr"
         :key="item.type + item.content + `${index}`"
-        :class="`main__block ${(item.type === 'pre' || item.type === 'next') ? 'main__block-not' : ''} ${(item.content === selectedDate && item.type === 'normal') && 'main__block-today'}`"
-        @click="handleDayClick(item)"
+        :class="`main__block ${item.isWrited ? 'main__block-write' : ''} ${(item.content < selectedDate && item.type === 'normal') && 'main__block-notWriting'}`"
       >{{ item.content }}</div>
+    </div>
+    <div class="bottom-info">
+      <div class="mark-info">
+        <span><i class="color-circle-0" />未更新</span>
+        <span><i class="color-circle-1" />已更新</span>
+      </div>
+      <p class="info-text">当月更新<span class="red-text">{{ word }}</span>字</p>
     </div>
   </div>
   <!-- </div> -->
@@ -53,8 +59,27 @@ export default {
       jumpYear: '',
       jumpMonth: '',
       selectYears: [],
-      selectMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      selectMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      writeDate: [1, 2, 5, 7, 9, 10, 14, 20],
+      word: 1030
     };
+  },
+  computed: {
+    calendarArr: function() {
+      const a = this.displayDaysPerMonthT(this.jumpYear)[this.jumpMonth - 1];
+      this.writeDate.forEach((item) => {
+        if (item >= 1 && item < this.selectedDate) {
+          for (let i = 0; i < a.length; i++) {
+            if (a[i].type === 'normal' && a[i].content === item) {
+              a[i].isWrited = true;
+              return;
+            }
+          }
+        }
+      });
+      console.log(a);
+      return a;
+    }
   },
   created() {
     this.initTimeDate();
@@ -62,9 +87,8 @@ export default {
   methods: {
     initTimeDate() {
       this.jumpYear = this.selectedYear;
-      this.jumpMonth = this.selectedMonth;
+      this.jumpMonth = this.selectedMonth + 1;
       for (let i = 0; i < 10; i++) {
-        console.log(this.selectYear);
         this.selectYears.push(this.selectedYear - i);
       }
     },

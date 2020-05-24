@@ -37,3 +37,49 @@
     }
   }
 }
+
+.writing-dialog {
+  .update-dialog {
+    text-align: center;
+    .new-chapter-info {
+      text-align: left;
+      line-height: 2;
+      padding: 1rem 0;
+      border-top: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e8;
+      p {
+        color: #333;
+      }
+      span {
+        color: #999;
+      }
+    }
+    .title {
+      margin-bottom: 1rem;
+    }
+    .el-checkbox {
+      float: left;
+      line-height: 4rem;
+    }
+    .el-input {
+      width: 13rem;
+      margin: 1rem 0;
+    }
+    .update-tips{
+      font-size: $font-small;
+      text-align: left;
+      margin-bottom: 1rem;
+      .el-icon-warning-outline {
+        color: #fc4545;
+        margin-right: 0.2rem;
+      }
+    }
+    .el-button {
+      width: 8.125rem /* 130/16 */;
+      text-align: center;
+    }
+    .cancel-btn {
+      color: $color-text;
+    }
+  }
+}

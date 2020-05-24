@@ -1,7 +1,7 @@
 <template class="">
   <div class="work-bench">
-    <el-row :gutter="50">
-      <el-col :sm="11">
+    <el-row :gutter="20">
+      <el-col :sm="9">
         <div class="author-info">
           <head-tag :data="headData">
             <el-button size="small" type="text" class="modify-info">修改资料</el-button>
@@ -9,7 +9,7 @@
           <div class="author-base">
             <el-image :src="authorMsg.pic" fit="cover" class="author-pic" />
             <div>
-              <h2>{{ authorMsg.name }}<span class="icon iconfont author-grade">&#xe61d; LV{{ authorMsg.grade }}</span></h2>
+              <h4>{{ authorMsg.name }}<span class="icon iconfont author-grade">&#xe61d; LV{{ authorMsg.grade }}</span></h4>
               <div class="author-books-msg">
                 <span class="mg-r">作品：<span class="color-text">{{ authorMsg.books }}</span>本</span>
                 <span>已上架：<span class="color-text">{{ authorMsg.putBooks }}</span>本</span>
@@ -21,15 +21,15 @@
             <div class="msg-box"><h4>{{ authorMsg.allWords }}</h4><p>累计字数</p></div>
             <div class="msg-box"><h4>{{ authorMsg.fens }}</h4><p>作品粉丝</p></div>
           </div>
+          <el-divider />
           <div class="create-msg">
-            <el-divider />
             <div class="msg-box"><h4>{{ authorMsg.feeTotal }}</h4><p>总稿费</p></div>
             <div class="msg-box"><h4>{{ authorMsg.feeSettle }}</h4><p>已结算</p></div>
             <div class="msg-box"><h4>{{ authorMsg.feeBalan }}</h4><p>余额</p></div>
           </div>
         </div>
       </el-col>
-      <el-col :sm="13" class="writing-cal hidden-xs-only">
+      <el-col :sm="15" class="writing-cal hidden-xs-only">
         <Calendar />
       </el-col>
     </el-row>

@@ -1,0 +1,110 @@
+.reset-password-main {
+  background: #fff;
+  border: 1px solid #e8e8ee;
+  box-shadow: 0px 0px 3px rgba($color: #000000, $alpha: 0.1);
+  .icon-number,
+  .is-status.el-icon-check {
+    display: inline-block !important;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    background: #c0c4cc;
+    color: initial;
+    border-radius: 50%;
+    transform: scale(1) !important;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: inline-block !important;
+      content: '1';
+      font-style: initial;
+      color: #fff;
+    }
+  }
+  .is-status.el-icon-check {
+    background: #67c23a;
+  }
+
+  .reset-password-main .el-icon-check::before {
+    display: none;
+  }
+
+  .icon-2::after,
+  .el-step:nth-child(2) .is-status.el-icon-check::after {
+    content: '2';
+  }
+  .icon-3::after,
+  .el-step:nth-child(3) .is-status.el-icon-check::after {
+    content: '3';
+  }
+  .icon-4::after,
+  .el-step:nth-child(4) .is-status.el-icon-check::after {
+    content: '4';
+  }
+  .is-finish {
+    .icon-1,
+    .icon-2,
+    .icon-3,
+    .icon-4 {
+      background: #fc4545;
+    }
+  }
+
+  .box {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+  .el-steps--simple {
+    background: none;
+    border-bottom: 1px solid #e8e8ee;
+    padding: 1.5rem 0;
+  }
+  .step-items {
+    min-height: 400px;
+    padding: 2rem 0;
+    .code {
+      overflow: hidden;
+      display: block;
+      width: auto;
+    }
+    .button {
+      float: right;
+      width: 30%;
+      margin-left: 1rem;
+    }
+  }
+  .success {
+    text-align: center;
+    margin-top: 4rem;
+    p {
+      margin: 1rem 0;
+    }
+    .el-icon-success {
+      font-size: 50px;
+      color: #67c23a;
+    }
+  }
+  .info {
+    margin-top: 2rem;
+    line-height: 1.8;
+    padding: 16px;
+    font-size: 12/16 * 1rem;
+    background: #e8e8e8;
+  }
+  @media screen and (max-width: 500px) {
+    .el-form-item__label {
+      width: 100% !important;
+      display: none;
+    }
+    .el-form-item__content {
+      margin-left: 0 !important;
+    }
+  }
+}
+.reset-password-footer {
+  padding: 1rem;
+  font-size: 13/16 * 1rem;
+  text-align: center;
+}

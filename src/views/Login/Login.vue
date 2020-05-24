@@ -33,7 +33,7 @@
                   </el-form-item>
                   <el-form-item class="remberUser">
                     <el-checkbox v-model="loginData.isRemeber">记住用户名</el-checkbox>
-                    <span class="forget-word">忘记密码</span>
+                    <router-link class="forget-word" to="/reset-password">忘记密码</router-link>
                   </el-form-item>
                 </el-form>
               </el-tab-pane>

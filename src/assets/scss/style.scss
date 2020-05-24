@@ -7,10 +7,12 @@ body {
   background: #f5f6f8;
 }
 .container-full {
+  padding: 0 10px;
 }
 .container {
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 1220px;
+  padding: 0px 10px;
   margin: 0 auto;
 }
 .margin-bottom {

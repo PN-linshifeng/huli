@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import BaseLayout from '@/layout/base/base';
-import MessageList from '@/views/Message/list';
-import MessageInfo from '@/views/Message/info';
+import MessageList from '@/views/Message/List';
+import MessageInfo from '@/views/Message/Info';
 
 Vue.use(Router);
 
@@ -40,7 +40,7 @@ export const constantRoutes = [
       {
         path: '/index',
         name: 'index',
-        component: () => import('@/views/Home/Home.vue') // 工作台
+        component: () => import('@/views/Home/Home.vue'), // 工作台
       },
       {
         path: '/message/:id',
@@ -55,12 +55,12 @@ export const constantRoutes = [
       {
         path: '/myworks',
         name: '/myworks',
-        component: () => import('@/views/WorkManage/MyWorks.vue') // 作品列表
+        component: () => import('@/views/WorkManage/MyWorks.vue'), // 作品列表
       },
       {
         path: '/myworks/setting:id',
         name: 'worksetting',
-        component: () => import('@/views/WorkManage/Setting/WorkSetting.vue') // 作品设置
+        component: () => import('@/views/WorkManage/Setting/WorkSetting.vue'), // 作品设置
       },
       {
         path: '/myworks/create',
@@ -70,17 +70,17 @@ export const constantRoutes = [
       {
         path: '/datacenter',
         name: '/datacenter',
-        component: () => import('@/views/DataCenter/list.vue'),
+        component: () => import('@/views/DataCenter/List.vue'),
       },
       {
         path: '/incomes',
         name: '/incomes',
-        component: () => import('@/views/Incomes/index.vue'),
+        component: () => import('@/views/Incomes/Index.vue'),
       },
       {
         path: '/reward',
         name: '/reward',
-        component: () => import('@/views/Incomes/reward.vue'),
+        component: () => import('@/views/Incomes/Reward.vue'),
       },
       {
         path: '/user',
@@ -134,35 +134,44 @@ export const constantRoutes = [
         name: 'draft',
         component: () => import('@/views/Writing/Draft/Draft.vue'),
         children: [
-          { path: '/writing/:bookname/draft/:id?',
+          {
+            path: '/writing/:bookname/draft/:id?',
             name: 'draftview',
-            component: () => import('@/views/Writing/Draft/index.vue')
-          }
-        ]
+            component: () => import('@/views/Writing/Draft/index.vue'),
+          },
+        ],
       },
       {
         path: '/writing/:bookname/recycle',
         name: 'recycle',
         component: () => import('@/views/Writing/Recycle/Recycle.vue'),
         children: [
-          { path: '/writing/:bookname/recycle/:id?',
+          {
+            path: '/writing/:bookname/recycle/:id?',
             name: 'recycleview',
-            component: () => import('@/views/Writing/Recycle/index.vue')
-          }
-        ]
+            component: () => import('@/views/Writing/Recycle/index.vue'),
+          },
+        ],
       },
       {
         path: '/writing/:bookname/published',
         name: 'published',
         component: () => import('@/views/Writing/Published/Published.vue'),
         children: [
-          { path: '/writing/:bookname/published/:id?',
+          {
+            path: '/writing/:bookname/published/:id?',
             name: 'publishedview',
-            component: () => import('@/views/Writing/Published/index.vue')
-          }
-        ]
-      }
-    ]
+            component: () => import('@/views/Writing/Published/index.vue'),
+          },
+        ],
+      },
+    ],
+  },
+  // 重置密码
+  {
+    path: '/reset-password',
+    name: '/reset-password',
+    component: () => import('@/views/ResetPassword/Index'),
   },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true },

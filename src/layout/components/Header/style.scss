@@ -8,7 +8,7 @@
 
   .logo {
     float: left;
-    width: 180px;
+    // width: 180px;
     text-align: center;
 
     img {
@@ -19,6 +19,14 @@
       font-size: 20px;
       line-height: 1;
       font-weight: bold;
+    }
+    i {
+      display: inline-block;
+      line-height: 1;
+      font-style: normal;
+      margin: 0px 0px 0 1rem;
+      padding-left: 1rem;
+      border-left: 1px solid #e8e8e8;
     }
   }
   .right {

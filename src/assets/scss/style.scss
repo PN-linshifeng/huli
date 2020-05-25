@@ -32,3 +32,11 @@ a {
 img {
   border: 0;
 }
+
+// ie table有bug
+.el-table__header {
+  width: 100% !important;
+}
+.el-table__body {
+  width: 100% !important;
+}

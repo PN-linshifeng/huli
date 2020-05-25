@@ -8,7 +8,7 @@
     </div> -->
     <head-tag :data="headData">
       <div class="dateSelect">
-        <el-select v-model="jumpYear" size="small" >
+        <el-select v-model="jumpYear" size="small">
           <el-option v-for="(a, index) in selectYears" :key="index" :label="`${a}年`" :value="a" />
         </el-select>
         <el-select v-model="jumpMonth" size="small">

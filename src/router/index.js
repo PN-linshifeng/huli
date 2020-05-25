@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import BaseLayout from '@/layout/base/base';
-import MessageList from '@/views/Message/List';
-import MessageInfo from '@/views/Message/Info';
+import MessageList from '@/views/Message/Lists';
+import MessageInfo from '@/views/Message/InfoDetail';
 
 Vue.use(Router);
 
@@ -70,17 +70,17 @@ export const constantRoutes = [
       {
         path: '/datacenter',
         name: '/datacenter',
-        component: () => import('@/views/DataCenter/List.vue'),
+        component: () => import('@/views/DataCenter/Lists.vue'),
       },
       {
         path: '/incomes',
         name: '/incomes',
-        component: () => import('@/views/Incomes/Index.vue'),
+        component: () => import('@/views/Incomes/Home.vue'),
       },
       {
         path: '/reward',
         name: '/reward',
-        component: () => import('@/views/Incomes/Reward.vue'),
+        component: () => import('@/views/Incomes/RewardPart.vue'),
       },
       {
         path: '/user',

@@ -4,13 +4,10 @@
   .modify-info {
     position: absolute;
     right: 1rem;
-    color: $color-text;
-    transform: translateY(50%);
     z-index: 2;
-    -webkit-transform: translateY(50%);
-    -moz-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    -o-transform: translateY(50%);
+    .el-button {
+      color: $color-text;
+    }
   }
   .author-info {
     position: relative;

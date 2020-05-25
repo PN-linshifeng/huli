@@ -4,7 +4,10 @@
       <el-col :sm="9">
         <div class="author-info">
           <head-tag :data="headData">
-            <el-button size="small" type="text" class="modify-info">修改资料</el-button>
+            <div class="modify-info">
+              <el-button size="small" type="text" class="hidden-sm-and-up" @click="clanderShow">码字日历</el-button>
+              <el-button size="small" type="text">修改资料</el-button>
+            </div>
           </head-tag>
           <div class="author-base">
             <el-image :src="authorMsg.pic" fit="cover" class="author-pic" />

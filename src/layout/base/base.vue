@@ -2,7 +2,7 @@
   <div class="has-topber has-aside">
     <base-header />
     <el-row class="container main-wrap">
-      <el-col :md="4" class="main-left">
+      <el-col :md="4" class="main-left hidden-sm-and-down">
         <base-aside />
       </el-col>
       <el-col :md="20" class="main-right">

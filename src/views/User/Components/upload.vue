@@ -1,5 +1,4 @@
 <template>
-
   <div class="div edit-avatar-box">
     <div class="edit">
       <div class="cut">
@@ -21,7 +20,6 @@
           :auto-crop-height="option.autoCropHeight"
           :center-box="option.centerBox"
           :high="option.high"
-          mode="cover"
           :max-img-size="option.max"
           @real-time="realTime"
         />
@@ -69,7 +67,6 @@
       </div>
     </div>
   </div>
-
 </template>
 <script>
 import { VueCropper } from 'vue-cropper';
@@ -90,15 +87,15 @@ export default {
       type: Array,
       required: false,
       default: function() {
-        return []
-      }
+        return [];
+      },
     },
     // 提交按钮状态
     uploadImageLoading: {
       type: Boolean,
       required: false,
-      default: false
-    }
+      default: false,
+    },
   },
   data: function() {
     return {
@@ -134,9 +131,9 @@ export default {
   },
   watch: {
     slider: function() {
-      this.changeScale(this.slider - this.sliderIndex)
+      this.changeScale((this.slider - this.sliderIndex) / 2);
       this.sliderIndex = this.slider;
-    }
+    },
   },
   mounted: function() {
     // console.log(window['vue-cropper'])
@@ -159,13 +156,13 @@ export default {
         this.$refs.cropper.getCropBlob(data => {
           file = window.URL.createObjectURL(data);
           // 上传事件写在这里
-          this.$emit('uploadImage', data)
+          this.$emit('uploadImage', data);
         });
       } else {
         this.$refs.cropper.getCropData(data => {
           file = data;
           // 上传事件写在这里
-          this.$emit('uploadImage', data)
+          this.$emit('uploadImage', data);
         });
       }
     },
@@ -212,9 +209,9 @@ export default {
     },
     // 取消按钮
     close() {
-      console.log(87)
-      this.$emit('close')
-    }
+      console.log(87);
+      this.$emit('close');
+    },
   },
 };
 </script>

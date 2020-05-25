@@ -10,13 +10,14 @@
           <i>重置密码</i>
         </div>
         <div class="right">
-
-          <router-link to="/login"><el-button type="primary" size="small">登陆</el-button></router-link>
+          <router-link to="/login">
+            <el-button type="primary" size="small">登陆</el-button>
+          </router-link>
         </div>
       </div>
     </div>
     <div class="container-full">
-      <div class="  container reset-password-main">
+      <div class="container reset-password-main">
         <div class="box">
           <el-steps :active="active" process-status="finish" finish-status="success" simple>
             <el-step title="身份验证" icon="icon-number icon-1" />
@@ -25,7 +26,6 @@
             <el-step title="完成修改" icon="icon-number icon-4" />
           </el-steps>
           <el-form ref="form" :data="form" label-width="100px" class="step-items">
-
             <div v-if="active===0" class="item">
               <el-form-item label="手机号码：">
                 <el-input v-model="form.tel" placeholder="请输入手机号码" />
@@ -33,21 +33,18 @@
               <el-form-item>
                 <el-button type="primary" @click="confirmTel">确认</el-button>
               </el-form-item>
-
             </div>
             <div v-else-if="active===1" class="item">
               <el-form-item label="手机号码：">
-                <el-input v-model="form.tel" placeholder="请输入手机号码" disabled="" />
+                <el-input v-model="form.tel" placeholder="请输入手机号码" disabled />
               </el-form-item>
               <el-form-item label="验证码：">
                 <el-button type="info" class="button">获取验证码</el-button>
                 <el-input v-model="form.code" class="code" />
-
               </el-form-item>
               <el-form-item>
                 <el-button type="primary" @click="confirmCode">立即认证</el-button>
               </el-form-item>
-
             </div>
             <div v-else-if="active===2" class="item">
               <el-form-item label="输入新密码：">
@@ -55,20 +52,19 @@
               </el-form-item>
               <el-form-item label="确认新密码：">
                 <el-input v-model="form.confirmPassword" placeholder="请输入输入新密码" show-password />
-
               </el-form-item>
               <el-form-item>
                 <el-button type="primary" @click="confirmPassword">下一步</el-button>
               </el-form-item>
-
             </div>
             <div v-else-if="active>=3" class="item success">
               <p>
                 <i class="el-icon-success" />
               </p>
               <p>密码修改成功</p>
-              <p><el-link to="/login" type="danger">返回登陆</el-link></p>
-
+              <p>
+                <router-link to="/login" type="danger">返回登陆</router-link>
+              </p>
             </div>
             <el-form-item v-if="active<=1">
               <div class="info">
@@ -82,9 +78,9 @@
         </div>
       </div>
     </div>
-    <div class="reset-password-footer">
-      版权说明：按实际的拉升阶段拉倒加拉 Copyright © 2020 All Rgiht Reserved 阅文集团版权所有
-    </div>
+    <div
+      class="reset-password-footer"
+    >版权说明：按实际的拉升阶段拉倒加拉 Copyright © 2020 All Rgiht Reserved 阅文集团版权所有</div>
   </div>
 </template>
 
@@ -95,25 +91,25 @@ export default {
     return {
       active: 0, // 切换步骤
       form: {
-        tel: ''
-      }
-    }
+        tel: '',
+      },
+    };
   },
   methods: {
     next(index) {
       this.active = index || ++this.active;
-      console.log(this.active)
+      console.log(this.active);
     },
     confirmTel() {
-      this.next()
+      this.next();
     },
     confirmCode() {
-      this.next()
+      this.next();
     },
     confirmPassword() {
-      this.next()
-      this.next()
-    }
-  }
+      this.next();
+      this.next();
+    },
+  },
 };
 </script>

@@ -21,9 +21,9 @@ export default {
         { icon: 'hulizu2518', name: '数据中心', path: '/datacenter' },
         { icon: 'hulizu2519', name: '收入统计', path: '/incomes' },
         { icon: 'hulizu2520', name: '积分兑换', path: '/redeem' },
-        { icon: 'hulizu2521', name: '帮助中心', path: '/helpcenter' }
-      ]
-    }
-  }
+        { icon: 'hulizu2521', name: '帮助中心', path: '/help' },
+      ],
+    };
+  },
 };
 </script>

@@ -1,0 +1,31 @@
+.query-key {
+  margin-left: -10px;
+  margin-right: -10px;
+  overflow: hidden;
+  .el-col {
+    float: left;
+    padding: 10px 10px;
+    width: 20%;
+    button {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .el-col {
+      width: 25%;
+    }
+  }
+  @media screen and (max-width: 577px) {
+    margin-left: -8px;
+    margin-right: -8px;
+    .el-col {
+      width: 33.33%;
+      padding: 8px 8px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .el-col {
+      width: 50%;
+    }
+  }
+}

@@ -1,11 +1,10 @@
 <template>
   <div>
-
     <el-form ref="infoForm" :data="info" label-width="100px" class="infoForm">
       <el-form-item label="您的头像：">
         <div class="img">
           <!-- <img src="../../assets/images/avatar.png" alt /> -->
-          <el-avatar :src="info.avatar" :size="70" class="avatar" />
+          <el-avatar :src="info.avatar||defaultAvatar" :size="70" class="avatar" />
           <el-button v-if="isEdit" @click="handleSwitchUpload">上传新头像</el-button>
         </div>
       </el-form-item>
@@ -97,13 +96,19 @@
       </div>
     </el-dialog>
     <el-dialog :visible.sync="dialogUploadVisible" title="头像设置" custom-class="dialog-upload">
-      <upload :url="info.avatar" :upload-image-loading="uploadImageLoading" :history-avatar="historyAvatar" @close="handleSwitchUpload" @uploadImage="uploadImage" />
+      <upload
+        :url="info.avatar||defaultAvatar"
+        :upload-image-loading="uploadImageLoading"
+        :history-avatar="historyAvatar"
+        @close="handleSwitchUpload"
+        @uploadImage="uploadImage"
+      />
     </el-dialog>
   </div>
-
 </template>
 <script>
-import upload from './Components/upload.vue'
+import upload from './Components/upload.vue';
+import defaultAvatar from '@/assets/images/default-avatar.jpg';
 
 const cityList = [
   {
@@ -183,14 +188,16 @@ export default {
       isEdit: false, // 编辑状态
       telRegion: '+86', // 电话区号
       infoForm: {}, // form 表单
+      defaultAvatar, // 默认头像
       // 历史头像
-      historyAvatar: ['https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg',
+      historyAvatar: [
         'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg',
-        'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg'],
+        'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg',
+        'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg',
+      ],
       // 假数据信息
       info: {
-        avatar:
-          'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3374416169,262924133&fm=111&gp=0.jpg',
+        avatar: '',
         name: '精炼石',
         nickname: '林珊珊',
         id: '114564561',
@@ -208,7 +215,6 @@ export default {
       errorVisible: false, // 失败窗口
       dialogUploadVisible: false, // 上传图片对话框
       uploadImageLoading: false, // 提交上传图片状态
-
     };
   },
   methods: {
@@ -236,17 +242,17 @@ export default {
     },
     // 上传图片方法
     uploadImage(data) {
-      console.log('fileName:', data)
+      console.log('fileName:', data);
       this.uploadImageLoading = true;
-      new Promise((resolve) => {
+      new Promise(resolve => {
         setTimeout(() => {
-          resolve('ok')
-        }, 2000)
+          resolve('ok');
+        }, 2000);
       }).then(() => {
-        this.handleSwitchUpload()
-        this.uploadImageLoading = false
-      })
-    }
+        this.handleSwitchUpload();
+        this.uploadImageLoading = false;
+      });
+    },
   },
 };
 </script>

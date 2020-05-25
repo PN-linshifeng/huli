@@ -110,6 +110,11 @@ export const constantRoutes = [
           },
         ],
       },
+      {
+        path: '/help',
+        name: '/help',
+        component: () => import('@/views/Help/Index.vue'),
+      },
     ],
   },
   {

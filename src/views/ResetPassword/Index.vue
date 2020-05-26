@@ -5,7 +5,7 @@
         <div class="logo">
           <router-link to="/">
             <img src="../../assets/images/logo.png" alt="狐狸小说" width="40" />
-            <span>作者专区</span>
+            <span>狐狸小说</span>
           </router-link>
           <i>重置密码</i>
         </div>
@@ -19,12 +19,11 @@
     <div class="container-full">
       <div class="container reset-password-main">
         <div class="box">
-          <el-steps :active="active" process-status="finish" finish-status="success" simple>
-            <el-step title="身份验证" icon="icon-number icon-1" />
-            <el-step title="身份验证" icon="icon-number icon-2" />
-            <el-step title="输入新密码" icon="icon-number icon-3" />
-            <el-step title="完成修改" icon="icon-number icon-4" />
-          </el-steps>
+          <Step
+            :data="[{title:'手机验证'},{title:'验证码验证'},{title:'输入新密码'},{title:'完成修改'}]"
+            :active="active"
+          />
+
           <el-form ref="form" :data="form" label-width="100px" class="step-items">
             <div v-if="active===0" class="item">
               <el-form-item label="手机号码：">
@@ -85,8 +84,11 @@
 </template>
 
 <script>
+import Step from '@/components/Step/Index.vue';
 import './style.scss';
+
 export default {
+  components: { Step },
   data() {
     return {
       active: 0, // 切换步骤

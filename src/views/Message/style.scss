@@ -87,14 +87,14 @@
   button {
     margin-left: 8/16 * 1rem;
   }
-  @media screen and (max-width: 557px) {
+  @include phoneVertical {
     .el-date-editor {
       width: 220/16 * 1rem;
     }
   }
 }
 .message-footer {
-  @media screen and (max-width: 557px) {
+  @include phoneVertical {
     .el-col-sm-24 {
       margin-bottom: 1rem;
     }

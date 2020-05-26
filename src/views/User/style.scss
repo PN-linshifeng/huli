@@ -58,7 +58,7 @@
     width: 90%;
     max-width: 760px;
   }
-  @media screen and (max-width: 557px) {
+  @include phoneVertical {
     .el-select,
     .tel,
     .el-cascader,

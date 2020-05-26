@@ -8,6 +8,7 @@
     width: 20%;
     button {
       width: 100%;
+      padding: 12px 5px;
     }
   }
   @media screen and (max-width: 768px) {
@@ -27,5 +28,25 @@
     .el-col {
       width: 50%;
     }
+  }
+}
+.help-list {
+  padding: 24/16 * 1rem 15/16 * 1rem;
+  background: #f5f6f8;
+  .item {
+    &:not(:last-child) {
+      margin-bottom: 32/16 * 1rem;
+    }
+    h3 {
+      font-size: 1.1em;
+      margin-bottom: 0.5rem;
+    }
+    .content {
+      color: #666;
+    }
+  }
+  .no-data {
+    text-align: center;
+    padding: 2rem;
   }
 }

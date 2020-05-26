@@ -5,9 +5,9 @@
   .icon-number,
   .is-status.el-icon-check {
     display: inline-block !important;
-    width: 1rem;
-    height: 1rem;
-    line-height: 1rem;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
     background: #c0c4cc;
     color: initial;
     border-radius: 50%;
@@ -17,8 +17,9 @@
     }
     &::after {
       display: inline-block !important;
+      width: 100%;
       content: '1';
-      font-style: initial;
+      font-style: normal;
       color: #fff;
     }
   }
@@ -91,9 +92,9 @@
   }
   .info {
     margin-top: 2rem;
-    line-height: 1.8;
+    line-height: 2;
     padding: 16px;
-    font-size: 12/16 * 1rem;
+    font-size: 14/16 * 1rem;
     background: #e8e8e8;
   }
   @media screen and (max-width: 500px) {

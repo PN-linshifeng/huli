@@ -9,13 +9,14 @@
   .writing-logo {
     width: 1.6875rem /* 27/16 */;
     line-height: 6.25rem;
+    margin: 0 .5rem;
     vertical-align: text-bottom;
     cursor: pointer;
   }
   .el-divider--vertical {
     display: block;
     float: left;
-    margin: 2.625rem /* 42/16 */ 1rem;
+    margin: 2.625rem /* 42/16 */ .5rem;
   }
   .book-name {
     max-width: 90%;
@@ -34,12 +35,17 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    .iconfont {
+    
+    .iconfont{
       font-size: 1.5rem;
     }
     &:hover {
       background-color: #f6f7f9;
     }
+  }
+  .el-icon-s-fold{
+    font-size: 3rem;
+    line-height: 6.25rem /* 100/16 */;
   }
   .active-bg {
     background-color: #f6f7f9;

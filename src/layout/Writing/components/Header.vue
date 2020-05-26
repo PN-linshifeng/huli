@@ -26,6 +26,9 @@
           <p>已发布</p>
         </router-link>
       </el-col>
+      <el-col :span="3" class="hidden-sm-and-up">
+        <span class="el-icon-s-fold" />
+      </el-col>
     </el-row>
   </div>
 </template>

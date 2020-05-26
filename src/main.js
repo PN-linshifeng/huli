@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
+import 'babel-polyfill';
 import './assets/theme/index.css';
 import 'element-ui/lib/theme-chalk/display.css';
 import router from './router/index'; // eslint-disable-line

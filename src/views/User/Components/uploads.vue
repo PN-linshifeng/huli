@@ -2,7 +2,7 @@
   <div class="div edit-avatar-box">
     <div class="edit">
       <div class="cut">
-        <vue-cropper
+        <vue-cropper9
           ref="cropper"
           :img="option.img"
           :output-size="option.size"
@@ -57,24 +57,25 @@
         <div class="item">
           <h3>历史头像</h3>
           <div>
-            <el-avatar v-for="(k,i) of historyAvatar" :key="k+i" :size="70" :src="k" />
+            <img v-for="(k,i) of historyAvatar" :key="k+i" :size="70" :src="k" class="avatar" />
           </div>
         </div>
       </div>
       <div class="button-box">
-        <el-button :loading="uploadImageLoading" type="primary" @click="handleUpImage">确定</el-button>
+        <el-button :loading="uploadImageLoading" type="primary" @click="handleUpImage()">确定</el-button>
         <el-button type="default" @click="close">取消</el-button>
       </div>
     </div>
   </div>
 </template>
 <script>
-import { VueCropper } from 'vue-cropper';
+// import { VueCropper } from 'vue-cropper';
+import VueCropper9 from './vue-cropper/vue-cropper';
 import './upload.scss';
 
 export default {
   components: {
-    VueCropper,
+    VueCropper9,
   },
   props: {
     // 当前使用的头像
@@ -100,7 +101,7 @@ export default {
   data: function() {
     return {
       circleUrl: this.url,
-
+      imgs: '',
       slider: 50, // 滑块值
       sliderIndex: 50, // 滑块上一次的值
       previews: {}, // 预览图片样式
@@ -134,7 +135,12 @@ export default {
       this.changeScale((this.slider - this.sliderIndex) / 2);
       this.sliderIndex = this.slider;
     },
+    imgs: function() {
+      console.log('data', this.imgs);
+      this.option.img = this.img;
+    },
   },
+
   mounted: function() {
     // console.log(window['vue-cropper'])
   },
@@ -156,7 +162,8 @@ export default {
         this.$refs.cropper.getCropBlob(data => {
           file = window.URL.createObjectURL(data);
           // 上传事件写在这里
-          this.$emit('uploadImage', data);
+          var img = window.URL.createObjectURL(data);
+          this.$emit('uploadImage', img);
         });
       } else {
         this.$refs.cropper.getCropData(data => {
@@ -196,14 +203,10 @@ export default {
         } else {
           data = e.target.result;
         }
-        if (num === 1) {
-          this.option.img = data;
-        } else if (num === 2) {
-          this.example2.img = data;
-        }
+        this.option.img = data;
       };
       // 转化为base64
-      // reader.readAsDataURL(file)
+      // reader.readAsDataURL(file);
       // 转化为blob
       reader.readAsArrayBuffer(file);
     },

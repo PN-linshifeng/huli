@@ -1,7 +1,7 @@
 <template>
   <div class="writing-published">
-    <el-row class="writing-area" :gutter="20">
-      <el-col :sm="5" class="writing-asider">
+    <el-row class="writing-area">
+      <el-col :sm="5" class="writing-asider hidden-xs-only">
         <div class="total-capters">本书共{{ totalNum }}卷，3章
           <el-button size="mini" type="primary" plain class="new-chapter-btn" @click="createNew">新建卷</el-button>
         </div>

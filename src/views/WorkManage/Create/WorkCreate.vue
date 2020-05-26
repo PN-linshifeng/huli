@@ -1,16 +1,12 @@
 <template>
   <div class="work-create">
     <p class="page-title">
-      <span>作品管理 > </span>
+      <span>作品管理 ></span>
       <span class="current-page">创建作品</span>
     </p>
     <div class="creat-info">
-      <el-steps :active="activeStep" process-status="finish" finish-status="success" simple>
-        <el-step title="选择类型" />
-        <el-step title="完善作品信息" />
-        <el-step title="创建成功" />
-      </el-steps>
-      <el-divider />
+      <Step :data="[{title:'选择类型'},{title:'完善作品信息'},{title:'创建成功'}]" :active="activeStep" />
+
       <first-step v-if="activeStep === 0" />
       <second-step v-else-if="activeStep === 1" />
       <third-step v-else />
@@ -30,6 +26,7 @@
 
 <script>
 import './style.scss';
+import Step from '@/components/Step/Index.vue';
 import FirstStep from './components/FirstStep.vue';
 import SecondStep from './components/SecondStep.vue';
 import ThirdStep from './components/ThirdStep.vue';
@@ -38,12 +35,13 @@ export default {
   components: {
     FirstStep,
     SecondStep,
-    ThirdStep
+    ThirdStep,
+    Step,
   },
   data() {
     return {
-      activeStep: 0
-    }
+      activeStep: 0,
+    };
   },
   methods: {
     toLastStep() {
@@ -55,7 +53,7 @@ export default {
     createdWork() {
       // 调用接口保存成功后跳转下一步
       this.activeStep += 2;
-    }
-  }
-}
+    },
+  },
+};
 </script>

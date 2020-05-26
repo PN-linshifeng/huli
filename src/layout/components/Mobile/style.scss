@@ -29,10 +29,42 @@
     }
   }
 }
-.mobile-menus{
-    .el-dialog{
-        position: absolute;
-        width: 75%;
-        height: 100vh;
+.mobile-menus {
+  .el-dialog {
+    position: absolute;
+    width: 75%;
+    height: 100vh;
+  }
+  .top-info {
+    text-align: center;
+    img{
+        width: 30%;
     }
+    a{
+        display: inline-block;
+        width: 40%;
+        font-size: $font-large;
+        padding: 1rem 0;
+    }
+  }
+  .aside-menu {
+    min-width: 70vh;
+    overflow-y: scroll;
+  }
+  .bottom-opera{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 1rem 0;
+    a{
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+    }
+    .el-icon-setting,
+    img{
+        width: 2rem;
+        font-size: 2rem;
+    }
+  }
 }

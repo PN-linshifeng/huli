@@ -94,7 +94,7 @@
         <el-button type="primary" size="small" @click="errorVisible = false">确 认</el-button>
       </div>
     </el-dialog>
-
+    <el-button @click="handleSwitchUpload">上传新头像</el-button>
     <el-dialog :visible.sync="dialogUploadVisible" title="头像设置" custom-class="dialog-upload">
       <uploadAvatar
         :url="info.avatar||defaultAvatar"

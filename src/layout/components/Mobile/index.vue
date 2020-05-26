@@ -21,7 +21,26 @@
       size="70%"
       :append-to-body="true"
     >
+      <div class="top-info">
+        <img src="../../../assets/images/avatar.png" alt="" />
+        <div>
+          <router-link to="/">立即写作</router-link>
+          <router-link to="/user">个人资料</router-link>
+        </div>
+      </div>
       <mobile-aside />
+      <div class="bottom-opera">
+        <router-link to="/welfare">
+          <img src="../../../assets/images/fuli.png" alt="作者福利" />
+        </router-link>
+        <router-link to="/message">
+          <img src="../../../assets/images/message.png" alt="消息" />
+          <!-- <el-badge :value="9" class="mark" /> -->
+        </router-link>
+        <router-link to="/login">
+          <i class="el-icon-setting" />
+        </router-link>
+      </div>
     </el-drawer>
   </div>
 </template>

@@ -4,6 +4,9 @@
   .avatar {
     vertical-align: middle;
     margin-right: 24px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
   }
   .el-form-item__label,
   .el-form-item__content {
@@ -54,5 +57,20 @@
   .dialog-upload {
     width: 90%;
     max-width: 760px;
+  }
+  @include phoneVertical {
+    .el-select,
+    .tel,
+    .el-cascader,
+    .tel-box {
+      width: 100% !important;
+    }
+    .telRegion,
+    .tel {
+      margin-bottom: 1rem;
+    }
+    .tel-box .el-link {
+      float: right;
+    }
   }
 }

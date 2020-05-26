@@ -1,7 +1,7 @@
 <template>
   <div class="writing-draft">
-    <el-row class="writing-area" :gutter="20">
-      <el-col :sm="5" class="writing-asider">
+    <el-row class="writing-area">
+      <el-col :sm="5" class="writing-asider hidden-xs-only">
         <p class="total-capters">共{{ totalNum }}个章节</p>
         <el-divider />
         <writing-asider :path="path" />

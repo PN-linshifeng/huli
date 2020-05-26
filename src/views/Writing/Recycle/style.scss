@@ -16,13 +16,14 @@
   }
   .writing-main {
     .opera-area {
-      height: 3.75rem /* 60/16 */;
+      // height: 3.75rem /* 60/16 */;
       line-height: 3.75rem /* 60/16 */;
       padding: 0 2rem;
       background-color: #fff;
       @extend %clearfix;
       .opera-button {
         float: right;
+        // margin: .5rem 0;
       }
     }
   }

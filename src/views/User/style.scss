@@ -58,4 +58,19 @@
     width: 90%;
     max-width: 760px;
   }
+  @media screen and (max-width: 557px) {
+    .el-select,
+    .tel,
+    .el-cascader,
+    .tel-box {
+      width: 100% !important;
+    }
+    .telRegion,
+    .tel {
+      margin-bottom: 1rem;
+    }
+    .tel-box .el-link {
+      float: right;
+    }
+  }
 }

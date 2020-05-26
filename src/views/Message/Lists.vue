@@ -1,12 +1,11 @@
 <template>
   <div class="card">
-    <header class="massge-header">
-      <h1>公共消息</h1>
-      <div class="search">
+    <head-tag :data="[{title:'公共消息',active:true}]" class="message-header">
+      <div class="main search">
         <el-date-picker v-model="searchDate" type="month" placeholder="请选择年月" size="small" />
         <el-button type="primary" size="small">查询</el-button>
       </div>
-    </header>
+    </head-tag>
 
     <div class="message-list">
       <ul>
@@ -35,7 +34,7 @@
       </ul>
     </div>
 
-    <el-row>
+    <el-row class="message-footer">
       <el-col :sm="24" :md="4">
         <el-link type="info">全部标记为已读</el-link>
       </el-col>
@@ -47,6 +46,7 @@
 </template>
 <script>
 import mement from 'moment';
+import HeadTag from '@/components/HeadTag/index.vue';
 import './style.scss';
 
 const data = [];
@@ -61,6 +61,7 @@ for (let i = 1; i <= 10; i += 1) {
   });
 }
 export default {
+  components: { HeadTag },
   data() {
     return {
       mement,

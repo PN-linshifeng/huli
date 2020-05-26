@@ -59,3 +59,17 @@
     // background-color: #fff;
   }
 }
+
+.calendar-dialog {
+  .el-dialog {
+    width: 100%;
+    max-width: 21rem;
+    .el-dialog__header,
+    .el-dialog__body{
+      padding: 0;
+    }
+  }
+  .calendar .dateSelect .el-select{
+    margin: 0;
+  }
+}

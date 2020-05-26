@@ -1,6 +1,6 @@
 <template>
   <div class="aside-menu">
-    <el-menu mode="vertical" router>
+    <el-menu mode="vertical" router :default-active="this.$route.path">
       <el-menu-item v-for="(item, index) in menuList" :key="index" :index="item.path">
         <span v-if="item.icon" :class="`iconfont ${item.icon}`" />
         <img v-else :src="item.picIcon" />

@@ -1,0 +1,38 @@
+.mobile-header {
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 1.25rem /* 20/16 */;
+  border-bottom: 1px solid #e8e8e8;
+  background: #ffffff;
+  font-size: 1rem;
+
+  .logo {
+    float: left;
+    // width: 180px;
+    text-align: center;
+
+    img {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    span {
+      font-size: 20px;
+      line-height: 1;
+      font-weight: bold;
+    }
+  }
+  .right {
+    text-align: right;
+    img {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  }
+}
+.mobile-menus{
+    .el-dialog{
+        position: absolute;
+        width: 75%;
+        height: 100vh;
+    }
+}

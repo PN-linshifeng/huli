@@ -8,7 +8,7 @@
     <div v-if="workList.length">
       <div v-for="(item, index) in workList" :key="index">
         <el-row>
-          <el-col :sm="12">
+          <el-col :md="12">
             <img :src="item.pic" class="work-pic" />
             <div class="work-desc">
               <h4>{{ item.name }} <el-tag size="small" effect="plain" type="info">{{ item.status }}</el-tag></h4>
@@ -17,8 +17,8 @@
               <p>更新时间：{{ item.midfyDate }}</p>
             </div>
           </el-col>
-          <el-col :sm="12">
-            <div class="work-tag">
+          <el-col :md="12">
+            <div class="work-tag hidden-sm-and-down">
               <el-tag v-for="(a, i) in item.labels" :key="i" size="small" :type="a.type" effect="plain">{{ a.label }}</el-tag>
             </div>
             <div class="work-opera">

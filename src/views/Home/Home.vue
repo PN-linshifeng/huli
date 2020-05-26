@@ -1,7 +1,7 @@
 <template class="">
   <div class="work-bench">
     <el-row :gutter="20">
-      <el-col :sm="9">
+      <el-col :md="9" :sm="10">
         <div class="author-info">
           <head-tag :data="headData">
             <div class="modify-info">
@@ -32,12 +32,21 @@
           </div>
         </div>
       </el-col>
-      <el-col :sm="15" class="writing-cal hidden-xs-only">
+      <el-col :md="15" :sm="14" class="writing-cal hidden-xs-only">
         <Calendar />
       </el-col>
     </el-row>
     <my-works />
     <web-announce />
+    <el-dialog
+      :visible.sync="calendarShow"
+      :append-to-body="true"
+      :show-close="false"
+      class="calendar-dialog"
+      top="20vh"
+    >
+      <Calendar />
+    </el-dialog>
   </div>
 </template>
 
@@ -58,6 +67,7 @@ export default {
   },
   data() {
     return {
+      calendarShow: false,
       headData: [{ title: '个人资料', active: true }],
       authorMsg: {
         name: '天蚕土豆',
@@ -72,6 +82,11 @@ export default {
         feeSettle: '1',
         feeBalan: '2'
       }
+    }
+  },
+  methods: {
+    clanderShow() {
+      this.calendarShow = true;
     }
   }
 }

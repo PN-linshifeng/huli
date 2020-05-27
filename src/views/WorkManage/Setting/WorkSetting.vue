@@ -13,7 +13,7 @@
         <el-form
           :model="workMsg"
           label-position="right"
-          label-width="80px"
+          label-width="90px"
         >
           <el-form-item label="作品名称：">
             <div v-if="!isEdit">

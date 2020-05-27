@@ -1,30 +1,29 @@
 @import '../../../assets/scss/variable.scss';
 
-.writing-draft {
-  .writing-asider {
-    padding: 0!important;
+.recycle-index {
+  .opera-area {
+    // height: 3.75rem /* 60/16 */;
+    line-height: 3.75rem /* 60/16 */;
+    padding: 0 2rem;
     background-color: #fff;
-    .total-capters {
-      padding: 0 1.25rem;
-      font-size: 0.75rem;
-      line-height: 3.7;
-    }
-    .el-divider--horizontal {
-      width: auto;
-      margin: 0 1.25rem /* 20/16 */;
-    }
-  }
-  .writing-main {
-    .opera-area {
-      // height: 3.75rem /* 60/16 */;
-      line-height: 3.75rem /* 60/16 */;
-      padding: 0 2rem;
-      background-color: #fff;
-      @extend %clearfix;
-      .opera-button {
-        float: right;
-        // margin: .5rem 0;
+    @extend %clearfix;
+    .type-select {
+      float: left;
+      .select-one {
+        float: left;
+        margin-right: 1rem;
       }
+    }
+    .opera-button {
+      float: right;
+      @include phoneVertical {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+      // margin: .5rem 0;
     }
   }
 }

@@ -1,41 +1,5 @@
 @import '../../../assets/scss/variable.scss';
 
-.writing-aside {
-  min-height: 28rem;
-  .el-menu {
-    border-right: none;
-  }
-  .menu-wrapper {
-    .el-menu-item,
-    .el-submenu__title {
-      padding-left: 20px !important;
-      padding-right: 1rem;
-      height: auto;
-      line-height: 1.2;
-      &.is-active {
-        background: #f6f7f9;
-        color: #303133;
-        border-left: 3px solid #fc4545;
-      }
-    }
-    .menu-item-content {
-      // height: 2.5rem;
-      border-bottom: 1px solid #f6f7f9;
-      padding: 1rem 0;
-      @extend %clearfix;
-    }
-    .menu-item-desc {
-      float: right;
-      color: $color-text;
-      font-size: $font-small;
-      line-height: 2;
-      &:first-child {
-        float: left;
-      }
-    }
-  }
-}
-
 .chapter-view {
   .write-tip{
     font-size: $font-small;

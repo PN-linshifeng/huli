@@ -6,7 +6,7 @@
           <head-tag :data="headData">
             <div class="modify-info">
               <el-button size="small" type="text" class="hidden-sm-and-up" @click="clanderShow">码字日历</el-button>
-              <el-button size="small" type="text">修改资料</el-button>
+              <el-button size="small" type="text" @click="$router.push('/user/info')">修改资料</el-button>
             </div>
           </head-tag>
           <div class="author-base">

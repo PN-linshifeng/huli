@@ -1,0 +1,48 @@
+.mobile-writing-header {
+  height: 6.25rem /* 100/16 */;
+  line-height: 6.25rem;
+  .writing-alink {
+    float: left;
+  }
+  .writing-logo {
+    width: 1.6875rem /* 27/16 */;
+    line-height: 6.25rem;
+    margin: 0 0.5rem;
+    vertical-align: text-bottom;
+    cursor: pointer;
+  }
+  .el-divider--vertical {
+    display: block;
+    float: left;
+    margin: 2.625rem /* 42/16 */ 0.5rem;
+  }
+  .collsip-btn {
+    text-align: center;
+    .show-btn {
+      width: 100%;
+      font-size: 2rem;
+    }
+  }
+}
+
+.mobile-menus {
+  .book-bin {
+    font-size: $font-small;
+    text-align: center;
+    line-height: 1.3;
+    margin: 1.2rem 0.5rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    &:hover {
+      background-color: #f6f7f9;
+    }
+  }
+  .active-bg {
+    background-color: #f6f7f9;
+  }
+}

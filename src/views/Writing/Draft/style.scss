@@ -1,40 +1,32 @@
 @import '../../../assets/scss/variable.scss';
 
-.writing-draft {
-  .writing-asider {
-    padding: 0 !important;
+.writing-main {
+  .opera-area {
+    // height: 3.75rem /* 60/16 */;
+    line-height: 3.75rem /* 60/16 */;
+    padding: 0 2rem;
     background-color: #fff;
-    .total-capters {
-      padding: 0 1.25rem;
-      font-size: 0.75rem;
-      line-height: 3.7;
-    }
-    .el-divider--horizontal {
-      width: auto;
-      margin: 0 1.25rem /* 20/16 */;
-    }
-  }
-  .writing-main {
-    .opera-area {
-      // height: 3.75rem /* 60/16 */;
-      line-height: 3.75rem /* 60/16 */;
-      padding: 0 2rem;
-      background-color: #fff;
-      @extend %clearfix;
-      .type-select {
+    @extend %clearfix;
+    .type-select {
+      float: left;
+      .select-one {
         float: left;
-        .select-one {
-          float: left;
-          margin-right: 1rem;
-        }
-        .el-select {
-          max-width: 7.5rem;
-        }
+        margin-right: 1rem;
       }
-      .opera-button {
-        float: right;
-        // margin: .5rem 0;
+      .el-select {
+        max-width: 7.5rem;
       }
+    }
+    .opera-button {
+      float: right;
+      @include phoneVertical {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+      // margin: .5rem 0;
     }
   }
 }
@@ -66,7 +58,7 @@
       width: 13rem;
       margin: 1rem 0;
     }
-    .update-tips{
+    .update-tips {
       font-size: $font-small;
       text-align: left;
       margin-bottom: 1rem;

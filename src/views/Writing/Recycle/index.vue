@@ -1,5 +1,5 @@
 <template>
-  <div class="published-index">
+  <div class="recycle-index">
     <div class="opera-area">
       <div class="type-select">
         <div class="select-one">

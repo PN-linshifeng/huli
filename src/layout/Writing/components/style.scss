@@ -43,11 +43,81 @@
       background-color: #f6f7f9;
     }
   }
-  .el-icon-s-fold{
-    font-size: 3rem;
-    line-height: 6.25rem /* 100/16 */;
-  }
   .active-bg {
     background-color: #f6f7f9;
+  }
+
+  .mobile-menus{
+    z-index: 100;
+  }
+}
+
+.writing-aside {
+  min-height: 28rem;
+  background-color: #fff;
+  .total-capters {
+    padding: 0 1.25rem;
+    font-size: 0.75rem;
+    line-height: 3.7;
+  }
+  .el-divider--horizontal {
+    width: auto;
+    margin: 0 1.25rem /* 20/16 */;
+  }
+
+  .el-menu {
+    border-right: none;
+  }
+  .menu-wrapper {
+    .el-menu-item,
+    .el-submenu__title {
+      padding-left: 20px !important;
+      padding-right: 1rem;
+      height: auto;
+      line-height: 1.2;
+      &.is-active {
+        background: #f6f7f9;
+        color: #303133;
+        border-left: 3px solid #fc4545;
+      }
+    }
+    .menu-item-content {
+      // height: 2.5rem;
+      border-bottom: 1px solid #f6f7f9;
+      padding: 1rem 0;
+      @extend %clearfix;
+    }
+    .menu-item-desc {
+      float: right;
+      color: $color-text;
+      font-size: $font-small;
+      line-height: 2;
+      &:first-child {
+        float: left;
+      }
+    }
+  }
+}
+
+.create-dialog {
+  text-align: center;
+  .title {
+    margin-bottom: 1.5rem;
+  }
+  .el-input {
+    width: auto;
+    min-width: 15rem;
+    margin-bottom: 1rem;
+  }
+  .el-icon-warning-outline {
+    color: #fc4545;
+    font-size: 3.75rem;
+    margin-bottom: 1rem;
+  }
+  .el-button {
+    width: 8.125rem /* 130/16 */;
+  }
+  .cancel-btn {
+    color: $color-text;
   }
 }

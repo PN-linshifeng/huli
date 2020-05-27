@@ -1,7 +1,7 @@
 <template>
   <div class="writing-header">
     <el-row>
-      <el-col :span="12">
+      <el-col :sm="12">
         <router-link to="/index" class="writing-alink">
           <img src="../../../assets/images/logo.png" alt="狐狸写作平台" class="writing-logo" />
         </router-link>
@@ -25,9 +25,6 @@
           <span class="iconfont hulizu2493" />
           <p>已发布</p>
         </router-link>
-      </el-col>
-      <el-col :span="3" class="hidden-sm-and-up">
-        <span class="el-icon-s-fold" />
       </el-col>
     </el-row>
   </div>

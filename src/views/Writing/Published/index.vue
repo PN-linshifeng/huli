@@ -32,7 +32,7 @@
 
 <script>
 import ChapterView from '../components/ChapterView';
-import DialogBox from '../components/DialogBox';
+import DialogBox from '@/components/Writing-dialog/DialogBox';
 import './style.scss';
 
 export default {

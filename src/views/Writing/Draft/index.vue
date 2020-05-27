@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="writing-main">
     <div class="opera-area">
       <div class="type-select">
         <div class="select-one">
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import DialogBox from '../components/DialogBox';
+import DialogBox from '@/components/Writing-dialog/DialogBox';
 import ChapterView from '../components/ChapterView';
 import './style.scss';
 

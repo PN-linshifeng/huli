@@ -71,7 +71,7 @@ export default {
     return {
       mobileMenuShow: false,
       btnClass: 'iconfont hulizu2491',
-      pathType: ''
+      pathType: '0'
     }
   },
   watch: {

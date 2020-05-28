@@ -1,4 +1,4 @@
-@import '../../../assets/scss/variable.scss';
+ 
 
 .writing-main {
   .opera-area {
@@ -7,6 +7,9 @@
     padding: 0 2rem;
     background-color: #fff;
     @extend %clearfix;
+    @include phoneVertical {
+      padding: 0 1rem;
+    }
     .type-select {
       float: left;
       .select-one {
@@ -14,7 +17,7 @@
         margin-right: 1rem;
       }
       .el-select {
-        max-width: 7.5rem;
+        max-width: 110px;
       }
     }
     .opera-button {

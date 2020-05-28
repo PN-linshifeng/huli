@@ -1,4 +1,4 @@
-@import '../../../assets/scss/variable.scss';
+ 
 
 .recycle-index {
   .opera-area {
@@ -7,6 +7,9 @@
     padding: 0 2rem;
     background-color: #fff;
     @extend %clearfix;
+    @include phoneVertical {
+      padding: 0 1rem;
+    }
     .type-select {
       float: left;
       .select-one {

@@ -1,4 +1,4 @@
-@import '../../../assets/scss/variable.scss';
+ 
 
 .chapter-view {
   .write-tip{
@@ -6,6 +6,9 @@
     color: $color-text;
     padding: .8rem 2rem;
     background-color: #f6f7f9;
+    @include phoneVertical {
+      padding: .5rem 1rem;
+    }
     .el-icon-warning-outline{
       font-size: $font-medium;
       color: #fc4545;
@@ -16,6 +19,9 @@
     min-height: 22rem;
     background-color: #fff;
     padding: 1rem 2rem;
+    @include phoneVertical {
+      padding: 1rem;
+    }
     .chapter-title {
       height: 3rem;
       line-height: 3rem;

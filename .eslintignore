@@ -1,6 +1,6 @@
 
 src/assets
-src/router/rou.js
+src/views/User/Components/vue-cropper
 node_modules
 dist
 git

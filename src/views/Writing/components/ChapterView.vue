@@ -12,6 +12,7 @@
       {{ viewData.content }}
       {{ tip.bookname }}
     </div>
+    <botton class="author-outline-btn">作者大纲</botton>
   </div>
 </template>
 
